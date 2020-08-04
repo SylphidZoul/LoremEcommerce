@@ -1,1 +1,1 @@
-A seguirlo cuando prepare el backend.
+Proyecto para practicar ecommerce
