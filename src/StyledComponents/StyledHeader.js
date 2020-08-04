@@ -24,7 +24,7 @@ export const HeaderWrapper = styled.header`
 export const HeaderLayer = styled.div`
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(17,10,17,0.17690826330532217) 16%, rgba(17,10,17,1) 95%);
+    background: linear-gradient(0deg, rgba(var(--rgbRed),0.17) 16%, var(--mainDark) 95%);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

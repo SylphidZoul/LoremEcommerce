@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Svg } from '../StyledComponents/StyledLogo'
-import { Link } from '@reach/router'
 
 export function Logo (props) {
   return (

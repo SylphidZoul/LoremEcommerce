@@ -1,7 +1,10 @@
 :root {
-    --mainRed: #c70005;
-    --mainBlue:#0c14ff;
-    --mainDark:#110A11;
-    --mainWhite:#f6f5f7;
-    
+    --mainRed: #a61c1a;
+    --rgbRed: 166, 28, 26;
+    --mainSilver: #586273;
+    --rgbSilver: 88, 98, 115;
+    --mainDark: #393d45;
+    --rgbDark: 57, 61, 69;
+    --mainWhite: #dbdbdb;
+    --rgbWhite: 219, 219, 219;
 }

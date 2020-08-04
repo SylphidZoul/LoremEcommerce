@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import GlobalStyle from './StyledComponents/GlobalStyles'
 import './App.css'
-import { Navbar } from './Pages/Navbar'
+import { Navbar } from './Containers/NavbarContainer'
 import { Routes } from './Routes/Routes'
 
 const App = () => {

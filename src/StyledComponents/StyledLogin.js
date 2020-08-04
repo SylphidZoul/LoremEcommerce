@@ -13,7 +13,7 @@ const FadeIn = keyframes`
 export const LoginWrapper = styled.div`
     width: 304px;
     height: 510px;
-    background: rgba(17,10,17,0.9);
+    background: rgba(var(--rgbSilver),0.9);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -25,7 +25,7 @@ export const LoginWrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 1px solid var(--mainWhite);
+    border: 1px solid var(--mainDark);
     box-shadow: 3px 3px 4px 0px var(--mainDark);
     transition: all 500ms ease-in-out;
     animation: ${FadeIn} 500ms ease-in-out;
@@ -61,4 +61,6 @@ export const Link = styled(RouterLink)`
     }
 `
 export const Error = styled.span`
-  color: var(--mainRed);`
+  color: var(--mainRed);
+  font-weight: 500;
+  align-self: center`

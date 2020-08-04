@@ -1,44 +1,49 @@
 import React, { createContext, useState } from 'react'
-
+import { useLocalStorage } from '../Hooks/useLocalStorage'
+import { useUserData } from '../Hooks/useUserData'
 const LoginContext = createContext()
 const { Provider } = LoginContext
 
 const LoginContextProvider = (props) => {
-  const [isAuth, setIsAuth] = useState(false)
-  const [user, setUser] = useState('')
+  const [token, setToken] = useLocalStorage('token', '')
+  const [isAuth, setIsAuth] = useState(() => token !== '')
+  const { userData, setUserData } = useUserData(isAuth, token)
   const [error, setError] = useState('')
   const [isFetching, setIsFetching] = useState(false)
-  const [loginModal, setLoginModal] = useState(false)
 
-  const handleAuth = async (user) => {
+  const handleAuth = (user, operation) => {
     setIsFetching(true)
-    const userRequest = `email=${user.email}`
-    const Response = await window.fetch('http://localhost:4000/login', {
+    const url = `http://localhost:3004/user/${operation}`
+    const config = {
       method: 'post',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: userRequest
-    })
-    const userDB = await Response.json()
-
-    if (userDB.ok) {
-      setUser(userDB.user.nombre)
-      setIsAuth(true)
-    } else {
-      setError('Datos Incorrectos.')
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(user)
     }
-    setIsFetching(false)
+    window.fetch(url, config)
+      .then(res => res.json())
+      .then((data) => {
+        if (!data.error) {
+          const userDB = data.body.user
+          setUserData(userDB)
+          setIsAuth(true)
+          setToken(data.body.token)
+          setError('')
+          setIsFetching(false)
+        } else {
+          setError(data.body)
+          setIsFetching(false)
+        }
+      })
   }
-
-  const handleModal = () => setLoginModal(!loginModal)
 
   const value = {
     isAuth,
     handleAuth,
-    user,
+    userData,
     error,
     isFetching,
-    loginModal,
-    handleModal
+    setError,
+    setIsAuth
   }
 
   return (

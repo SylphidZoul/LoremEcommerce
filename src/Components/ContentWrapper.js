@@ -1,6 +1,5 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { MainWrapper } from '../StyledComponents/StyledContentWrapper'
 import PropTypes from 'prop-types'
 
 export const ContentWrapper = ({ children, title, subtitle }) => {

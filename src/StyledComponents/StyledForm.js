@@ -46,6 +46,13 @@ export const Input = styled.input`
     margin-bottom: 8%;
     margin-top: 2%;
     outline: none;
+    &::placeholder {
+        color: var(--mainWhite);
+        opacity: 1;
+    }
+    &::-ms-input-placeholder {
+        color: var(--mainWhite);
+    }
     @media screen and (min-width: 480px){
         font-size: 0.9em;
     }

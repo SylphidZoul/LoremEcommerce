@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { HeaderWrapper, HeaderLayer, Title, SubTitle, HeaderButton } from '../StyledComponents/StyledHeader'
+
 const Header = () => {
   return (
     <>
@@ -19,27 +20,6 @@ const Header = () => {
           </HeaderButton>
         </HeaderLayer>
       </HeaderWrapper>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <br />

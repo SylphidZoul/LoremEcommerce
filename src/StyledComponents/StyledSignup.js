@@ -18,7 +18,7 @@ export const Background = styled.div`
 export const SignupLayer = styled.section`
   width: 100%;
   height: 100%;
-  background: rgba(17,10,17,0.5);
+  background: rgba(var(--rgbDark), 0.5);
   padding: 3% 0;
   display: flex;
   justify-content: center;
@@ -30,12 +30,12 @@ export const SignupForm = styled.div`
   width: 90%;
   height: 100%;
   padding: 4% 5% 2%;
-  background: rgba(17,10,17,0.6);
+  background: rgba(var(--rgbSilver), 0.9);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
-  border: 1px solid var(--mainWhite);
+  border: 1px solid var(--mainDark);
   box-shadow: 3px 3px 4px 0px var(--mainDark);
   @media screen and (min-width: 468px){
     width: 60%;
@@ -52,3 +52,5 @@ export const SignupForm = styled.div`
     padding: 4% 2% 2%;
   }
 `
+export const Error = styled.span`
+  color: var(--mainRed);`

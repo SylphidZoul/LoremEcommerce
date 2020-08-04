@@ -3,16 +3,12 @@ import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props
 import { SocialMediaButton } from '../StyledComponents/SocialMediaButton'
 import { FaFacebookF } from 'react-icons/fa'
 
-export const FacebookButton = ({ login }) => {
-  const responseFacebook = (response) => {
-    console.log(response)
-  }
-
+export const FacebookButton = ({ login, handleSocialButton, keys }) => {
   return (
     <FacebookLogin
-      appId='1698932393605899'
+      appId={keys}
       fields='name,email,picture'
-      callback={responseFacebook}
+      callback={(response) => handleSocialButton(response, 'facebook')}
       render={renderProps => (
         <SocialMediaButton onClick={renderProps.onClick} login={login}>
           <FaFacebookF />
