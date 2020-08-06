@@ -1,4 +1,14 @@
 :root {
+    --mainRed: #8810f9;
+    --rgbRed: 136, 16, 249;
+    --mainSilver: #3f0377;
+    --rgbSilver: 63, 3, 119;
+    --mainDark: #191919;
+    --rgbDark: 25, 25, 25;
+    --mainWhite: #d8d8f6;
+    --rgbWhite: 216, 216, 246;
+}
+/* :root {
     --mainRed: #a61c1a;
     --rgbRed: 166, 28, 26;
     --mainSilver: #586273;
@@ -8,3 +18,4 @@
     --mainWhite: #dbdbdb;
     --rgbWhite: 219, 219, 219;
 }
+ */

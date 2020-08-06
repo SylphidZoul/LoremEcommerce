@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const CardContainer = styled.div`
     width: 100%;
-    height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -10,24 +9,24 @@ export const CardContainer = styled.div`
     
     @media screen and (min-width: 768px){
         flex-direction: row;
-        height: 60vh;
+        flex-wrap: wrap;
     }
 `
 export const Card = styled.div`
 
-    width: 90%;
-    height: 20%;
+    width: 20%;
+    height: 360px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--mainWhite);
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    background: #EEE;
+    box-shadow: 0px 0px 7px 0px rgba(var(--rgbDark),0.3);
 
     @media screen and (min-width: 768px){
-        margin: auto 0;
+        margin: 30px;
         width: 20%;
-        height: 90%;
+        height: 360px;
         flex-direction: column;
     }
 `

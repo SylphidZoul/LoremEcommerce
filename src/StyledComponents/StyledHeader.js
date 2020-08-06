@@ -1,36 +1,26 @@
 import styled from 'styled-components'
-import Concert from '../Assets/concert.jpg'
+import Band from '../Assets/band.svg'
 
 export const HeaderWrapper = styled.header`
     width: 100%;
-    height: 700px;
-    background: url(${Concert});
-    background-size: cover;
-    background-position-x: -130px;
-    @media screen and (min-width: 480px){
-        height: 550px;
-    }
-    @media screen and (min-width: 768px){
-        background-position-x: 0;
-    }
-    @media screen and (min-width: 1280px){
-        background-position-y: -100px; 
-    }
-    @media screen and (min-width: 1600px){
-        background-position-y: -200px;
-    }
-`
-
-export const HeaderLayer = styled.div`
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(var(--rgbRed),0.17) 16%, var(--mainDark) 95%);
+    height: 760px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 8% 20% 5%;
-    font-family: 'Metal Mania';`
+    padding: calc(8% + 60px) 20% 5%;
+    font-family: 'Metal Mania';
+    background: url(${Band});
+    background-size: cover;
+    @media screen and (min-width: 480px){
+        padding-top: 0;
+        height: 600px;
+    }
+    @media screen and (min-width: 768px){
+        height: 750px;
+        padding-top: calc(200px + 6%);
+    }
+`
 
 export const Title = styled.h1`
     text-align: center;
@@ -44,9 +34,10 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h3`
     width: 80%;
+    max-width: 630px;
     font-size: 1em;
     color: var(--mainWhite);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.4pt;
@@ -63,14 +54,16 @@ export const HeaderButton = styled.div`
     border-radius: 1px;
     transition: all 250ms ease-in-out;
     letter-spacing: 2pt;
-
+    @media screen and (min-width: 468px){
+        padding: 5%;
+    }
     @media screen and (min-width: 768px){
         font-size: 2em;
         padding: 2%;
         cursor: pointer;
         &:hover {
             background: var(--mainWhite);
-            mix-blend-mode: color-dodge;
+            mix-blend-mode: screen;
             color: black;
         }
     }`

@@ -32,15 +32,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	margin-top: 120px;
 	font-family: 'Montserrat', sans-serif;
 	background: var(--mainDark);
-	@media (min-width: 480px){
-		margin-top: 90px;
-	}
-	@media (min-width: 768px){
-		margin-top: 200px;
-	}
 }
 ol, ul {
 	list-style: none;
@@ -56,11 +49,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-@media screen and (max-width: 400px) {
-		height:100vh;
-		weight:100vw;
-	
 }
 `
 export default GlobalStyle

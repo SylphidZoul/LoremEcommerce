@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { NavLink as RouterNavLink, Link as RouterLink } from 'react-router-dom'
-import Loco from '../Assets/band.svg'
 
 export const NavWrapper = styled.nav`
   position: fixed;
@@ -11,15 +10,14 @@ export const NavWrapper = styled.nav`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: var(--mainDark);
   transition: all 300ms ease-in-out;
+  z-index: 100;
   ${props => props.scroll && css`
     height: 60px;
     background: rgba(var(--rgbDark), 0.7);
     border-bottom: 1px solid var(--mainWhite);
     box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.5);
   `}
-
   @media screen and (min-width: 480px){
     height: ${props => props.scroll ? '50px' : '90px'};
   }
@@ -27,7 +25,7 @@ export const NavWrapper = styled.nav`
   @media screen and (min-width: 768px){
     height: 200px;
     padding: 130px 0 10px;
-    background-image: url(${Loco});
+    background: transparent;
     background-size: cover;
     background-position-y: -30px;
     ${props => props.scroll && css`
@@ -52,6 +50,7 @@ export const NavUl = styled.ul`
   visibility: ${props => props.open ? 'visible' : 'hidden'};
   transform: translateX(-18%) skew(-16deg);
   & > li {
+    z-index: 102;
     transform: skew(16deg);
   }
   &::before {
@@ -65,7 +64,7 @@ export const NavUl = styled.ul`
     transform-origin: 0 0;
     transform: ${props => props.open ? 'skew(-2deg) translateX(-7%)' : 'skew(-14deg) translateX(-120%)'};
     transition: all .275s .1s;
-    z-index: 0;
+    z-index: 101;
     opacity: ${props => props.open ? 1 : 0};
     box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.5);
   }
@@ -75,6 +74,7 @@ export const NavUl = styled.ul`
   @media screen and (min-width: 768px){
     position: initial;
     width: 70%;
+    max-width: 1000px;
     height: initial;
     flex-direction: row;
     visibility: visible;

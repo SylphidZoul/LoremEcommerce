@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import { Link as RouterLink } from 'react-router-dom'
+import Guitar from '../Assets/guitar2.svg'
 
 const FadeIn = keyframes`
     0% {
@@ -12,22 +13,25 @@ const FadeIn = keyframes`
 
 export const LoginWrapper = styled.div`
     width: 304px;
-    height: 510px;
-    background: rgba(var(--rgbSilver),0.9);
+    height: 460px;
+    background: var(--mainDark);
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -255px;
+    margin-top: -230px;
     margin-left: -152px;
     padding: 3% 8%;
-    z-index: 99;
+    z-index: 200;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 1px solid var(--mainDark);
-    box-shadow: 3px 3px 4px 0px var(--mainDark);
+    box-shadow: 0px 0px 4px 0px var(--mainRed);
     transition: all 500ms ease-in-out;
+    background-image: url(${Guitar});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 110%;
     animation: ${FadeIn} 500ms ease-in-out;
 
     @media screen and (min-width: 480px){ 
@@ -37,16 +41,21 @@ export const LoginWrapper = styled.div`
         margin-top: -152px;
         padding: 3%;
         justify-content: space-evenly;
+        background-position-x: 50%;
     }
 
     @media screen and (min-width: 768px){
-        width: 375px;
+        width: 425px;
         height: 550px;
         margin-top: -275px;
-        margin-left: -187.5px;
+        margin-left: -212.5px;
         top: 50%;
         left: 50%;
-        padding: 4% 2% 2%;
+        padding: 2% 4%;
+        background-position-x: 100%;
+    }
+    @media screen and (min-width: 1600px){
+        padding: 1% 2%;
     }
 `
 export const Link = styled(RouterLink)`
@@ -61,6 +70,6 @@ export const Link = styled(RouterLink)`
     }
 `
 export const Error = styled.span`
-  color: var(--mainRed);
+  color: red;
   font-weight: 500;
   align-self: center`

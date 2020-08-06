@@ -8,7 +8,7 @@ export const Svg = styled.svg`
     transition: all 200ms ease-in-out;
     top: ${props => props.scroll ? '0' : '30px'};
     height: ${props => props.scroll ? '90%' : '45%'};
-    left: ${props => props.scroll ? '0' : 'calc(50% - 190px)'};
+    left: ${props => props.scroll ? '5%' : 'calc(50% - 135px)'};
     transform: ${props => props.scroll ? 'translateX(-20%)' : 'none'}
   }
 `

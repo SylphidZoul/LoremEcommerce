@@ -19,6 +19,9 @@ export const FormTitle = styled.h2`
         margin-bottom: 5%;
     }
     @media screen and (min-width: 768px){
+        position: relative;
+        width: 75%;
+        align-self: center;
         font-size: 2em;
         margin-bottom: 0;
     }
@@ -69,7 +72,7 @@ export const Button = styled.button`
     cursor: pointer;
     &:hover{
         color: var(--mainWhite);
-        background: var(--mainRed);
+        background: var(--mainSilver);
     }
     @media screen and (min-width: 480px){
         margin-bottom: 8%;
