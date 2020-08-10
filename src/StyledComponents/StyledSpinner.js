@@ -17,3 +17,14 @@ export const Spinner = styled.div`
   height: 25px;
   animation: ${spin} 1s ease-out infinite;
 `
+
+export const LoadingPage = styled(Spinner)`
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-width: 15px;
+  top: 50%;
+  left: 50%;
+  margin-top: -37.5px;
+  margin-left: -37.5px;
+`

@@ -1,24 +1,28 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
-import Home from '../Pages/Home'
-import PrivateRoute from './PrivateRoutes'
-import { Cart } from '../Pages/Cart'
-import { Login } from '../Containers/LoginContainer'
-import Profile from '../Pages/Profile'
-import { SignupContainer } from '../Containers/SignupContainer'
+import React, { Suspense, lazy } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import { PrivateRoute } from './PrivateRoutes'
+import { LoadingPage } from '../StyledComponents/StyledSpinner'
+
+const Home = lazy(() => import('../Pages/Home'))
+const Login = lazy(() => import('../Containers/LoginContainer'))
+const Signup = lazy(() => import('../Containers/SignupContainer'))
+const About = lazy(() => import('../Pages/About'))
+const Cart = lazy(() => import('../Pages/Cart'))
+const Profile = lazy(() => import('../Pages/Profile'))
 
 export const Routes = () => {
   return (
     <>
-      <Route component={Home} path='/' exact />
-      <Route component={SignupContainer} path='/signup' />
-      <Route component={Login} path='/' />
-      <PrivateRoute path='/cart'>
-        <Cart />
-      </PrivateRoute>
-      <PrivateRoute path='/profile'>
-        <Profile />
-      </PrivateRoute>
+      <Suspense fallback={<LoadingPage />}>
+        <Route path='/' component={Login} />
+        <Switch>
+          <Route path='/' component={Home} exact />
+          <Route path='/signup' component={Signup} />
+          <Route path='/about' component={About} />
+          <PrivateRoute path='/cart' Component={Cart} />
+          <PrivateRoute path='/profile' Component={Profile} />
+        </Switch>
+      </Suspense>
     </>
   )
 }

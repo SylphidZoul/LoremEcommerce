@@ -1,12 +1,24 @@
 import React from 'react'
-import { Section, Divider, Divider2 } from '../StyledComponents/StyledSection'
+import { Section, ContentWrapper, Divider, SectionTitle } from '../StyledComponents/StyledSection'
+import PropTypes from 'prop-types'
 
-export const SectionComponent = ({ children, colorTop = 'mainWhite', color = 'mainDark', colorBot = 'mainWhite' }) => {
+export const SectionComponent = ({ children, colorTop = 'mainWhite', color = 'mainDark', title }) => {
   return (
-    <Section color={color}>
+    <Section color={color} colorTop={colorTop}>
       <Divider color={colorTop} />
-      {children}
-      <Divider2 color={colorBot} />
+      <ContentWrapper>
+        {title &&
+          <SectionTitle color={color}>
+            {title}
+          </SectionTitle>}
+        {children}
+      </ContentWrapper>
     </Section>
   )
+}
+SectionComponent.propTypes = {
+  children: PropTypes.node,
+  colorTop: PropTypes.string,
+  color: PropTypes.string,
+  title: PropTypes.string
 }

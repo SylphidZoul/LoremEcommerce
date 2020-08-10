@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Band from '../Assets/band.svg'
 
 export const HeaderWrapper = styled.header`
+    position: relative;
     width: 100%;
     height: 760px;
     display: flex;

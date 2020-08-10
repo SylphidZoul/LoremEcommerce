@@ -1,7 +1,8 @@
 import React from 'react'
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import { SocialMediaButton } from '../StyledComponents/SocialMediaButton'
-import { FaFacebookF } from 'react-icons/fa'
+import FaFacebookF from '@meronex/icons/fa/FaFacebook'
+import PropTypes from 'prop-types'
 
 export const FacebookButton = ({ loginStyle, handleSocialButton, keys }) => {
   return (
@@ -17,4 +18,9 @@ export const FacebookButton = ({ loginStyle, handleSocialButton, keys }) => {
       )}
     />
   )
+}
+FacebookButton.propTypes = {
+  loginStyle: PropTypes.bool,
+  handleSocialButton: PropTypes.func.isRequired,
+  keys: PropTypes.string.isRequired
 }

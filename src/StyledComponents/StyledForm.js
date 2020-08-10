@@ -26,16 +26,6 @@ export const FormTitle = styled.h2`
         margin-bottom: 0;
     }
 `
-export const Label = styled.label`
-    color: var(--mainWhite);
-    font-size: 1.2em;
-    @media screen and (min-width: 480px){
-        font-size: 0.8em;
-    }
-    @media screen and (min-width: 768px){
-        font-size: 1em;
-    }
-`
 export const Input = styled.input`
     width: 98%;
     font-family: 'Montserrat', sans-serif;

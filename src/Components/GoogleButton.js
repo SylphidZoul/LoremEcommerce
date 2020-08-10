@@ -1,7 +1,8 @@
 import React from 'react'
 import { GoogleLogin } from 'react-google-login'
 import { SocialMediaButton } from '../StyledComponents/SocialMediaButton'
-import { FaGoogle } from 'react-icons/fa'
+import FaGoogle from '@meronex/icons/fa/FaGoogle'
+import PropTypes from 'prop-types'
 
 export const GoogleButton = ({ loginStyle, handleSocialButton, keys }) => {
   return (
@@ -18,4 +19,9 @@ export const GoogleButton = ({ loginStyle, handleSocialButton, keys }) => {
       )}
     />
   )
+}
+GoogleButton.propTypes = {
+  loginStyle: PropTypes.bool,
+  handleSocialButton: PropTypes.func.isRequired,
+  keys: PropTypes.string.isRequired
 }

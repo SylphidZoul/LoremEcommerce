@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { NavWrapper, LogoLink, NavUl, Link, NavLink } from '../StyledComponents/StyledNavbar'
-import { BsPeople, BsPerson } from 'react-icons/bs'
-import { AiOutlineShop, AiOutlineShoppingCart } from 'react-icons/ai'
 import { Logo } from './Logo'
 import { Burger } from './Burger'
+import BsPeople from '@meronex/icons/bs/BsPeople'
+import BsPerson from '@meronex/icons/bs/BsPerson'
+import AiOutlineShop from '@meronex/icons/ai/AiOutlineShop'
+import AiOutlineShoppingCart from '@meronex/icons/ai/AiOutlineShoppingCart'
 
 export const NavbarComponent = ({ isScrolled, isOpen, handleOpen, isAuth, userName, currentPath }) => {
   return (

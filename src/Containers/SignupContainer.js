@@ -1,17 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { LoginContext } from '../Context/LoginContext'
 import { SignupComponent } from '../Pages/Signup'
 
-export const SignupContainer = (props) => {
-  const [redirect, setRedirect] = useState('')
+const SignupContainer = ({ history, location }) => {
   const { error, isAuth } = useContext(LoginContext)
 
   useEffect(() => {
     if (isAuth) {
-      setRedirect(props.location.search.slice(1))
-      props.history.push(redirect)
+      (location.search && location.search !== '?login') ? history.push(location.search.slice(1)) : history.push('/')
     }
   })
 
   return <SignupComponent error={error} />
 }
+
+export default SignupContainer

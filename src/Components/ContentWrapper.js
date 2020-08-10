@@ -6,7 +6,7 @@ export const ContentWrapper = ({ children, title, subtitle }) => {
   return (
     <>
       <Helmet>
-        {title && <title>{title} | LoremApp </title>}
+        {title && <title>{title} | LoremEcommerce </title>}
         {subtitle && <meta name='description' content={subtitle} />}
       </Helmet>
       {children}

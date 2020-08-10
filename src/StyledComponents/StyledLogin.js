@@ -1,20 +1,11 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { Link as RouterLink } from 'react-router-dom'
 import Guitar from '../Assets/guitar2.svg'
-
-const FadeIn = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
+import { FadeIn } from './Animations'
 
 export const LoginWrapper = styled.div`
     width: 304px;
     height: 460px;
-    background: var(--mainDark);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -27,7 +18,7 @@ export const LoginWrapper = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     box-shadow: 0px 0px 4px 0px var(--mainRed);
-    transition: all 500ms ease-in-out;
+    background: var(--mainDark);
     background-image: url(${Guitar});
     background-size: contain;
     background-repeat: no-repeat;

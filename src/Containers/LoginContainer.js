@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { LoginContext } from '../Context/LoginContext'
 import { LoginComponent } from '../Pages/Login'
 
-export const Login = ({ location, history }) => {
+const Login = ({ location, history }) => {
   const { error, isFetching, isAuth, handleAuth } = useContext(LoginContext)
 
   const closeModal = () => {
@@ -14,7 +14,6 @@ export const Login = ({ location, history }) => {
     const user = {
       token
     }
-    console.log(user, socialNet)
     handleAuth(user, socialNet)
   }
 
@@ -37,3 +36,4 @@ export const Login = ({ location, history }) => {
     )
   )
 }
+export default Login

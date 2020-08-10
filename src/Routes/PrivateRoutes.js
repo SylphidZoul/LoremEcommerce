@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import { LoginContext } from '../Context/LoginContext'
 
-function PrivateRoute ({ children, ...rest }) {
+export const PrivateRoute = ({ Component, ...rest }) => {
   const { isAuth } = useContext(LoginContext)
 
   return (
@@ -14,10 +14,9 @@ function PrivateRoute ({ children, ...rest }) {
           search: '?login'
         }
         return (
-          isAuth ? (children) : (<Redirect to={Data} />)
+          isAuth ? (<Component />) : (<Redirect to={Data} />)
         )
       }}
     />
   )
 }
-export default PrivateRoute
