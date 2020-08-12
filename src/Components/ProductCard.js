@@ -4,7 +4,7 @@ import { Card, CardText, AlbumCover, Price, Button } from '../StyledComponents/S
 import FaCartPlus from '@meronex/icons/fa/FaCartPlus'
 import PropTypes from 'prop-types'
 
-export const ProductCard = ({ img, name, unitPrice, artist }) => {
+export const ProductCard = ({ img, name, unitPrice, artist, addProduct }) => {
   const [show, ref] = useLazyLoading()
   return (
     <Card ref={ref}>
@@ -17,7 +17,7 @@ export const ProductCard = ({ img, name, unitPrice, artist }) => {
             <br />
             {artist}
           </CardText>
-          <Button>
+          <Button onClick={addProduct}>
             <FaCartPlus size='30px' />
           </Button>
         </>}

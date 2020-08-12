@@ -15,7 +15,8 @@ export const useUserData = (isAuth, token) => {
           setUserData(response.body)
         })
     }
+    // eslint-disable-next-line
   }, [])
 
-  return { userData, setUserData }
+  return [userData, setUserData]
 }

@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
-import { LoginContext } from '../Context/LoginContext'
+import { AuthContext } from '../Context/AuthContext'
 import { SignupComponent } from '../Pages/Signup'
 
 const SignupContainer = ({ history, location }) => {
-  const { error, isAuth } = useContext(LoginContext)
+  const { error, isAuth } = useContext(AuthContext)
 
   useEffect(() => {
     if (isAuth) {

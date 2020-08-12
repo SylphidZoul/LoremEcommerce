@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import { LoginContext } from '../Context/LoginContext'
+import { AuthContext } from '../Context/AuthContext'
 import { FormComponent } from '../Components/Form'
 import { validateFormData } from '../utils/FormValidation'
 
 export const Form = ({ operation }) => {
-  const { handleAuth, isFetching, setError } = useContext(LoginContext)
+  const { handleAuth, isFetching, setError } = useContext(AuthContext)
 
   const handleSubmit = (event) => {
     event.preventDefault()

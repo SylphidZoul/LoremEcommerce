@@ -27,7 +27,6 @@ export const Title = styled.h1`
     text-align: center;
     font-size: 2em;
     color: var(--mainWhite);
-    font-weight: bold;
     letter-spacing: 2pt;
     @media (min-width: 1000px){
        font-size: 2.5em; 
@@ -41,14 +40,13 @@ export const SubTitle = styled.h3`
     font-weight: 400;
     line-height: 1.5;
     text-align: center;
-    letter-spacing: 0.4pt;
-    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.8pt;
+    font-family: 'Poppins', sans-serif;
     `
 
 export const HeaderButton = styled.div`
     font-size: 1.8em;
     text-align: center;
-    font-weight: bold;
     color: var(--mainWhite);
     padding: 7%;
     border: 1px solid var(--mainWhite);

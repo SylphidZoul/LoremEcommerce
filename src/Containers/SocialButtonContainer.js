@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { LoginContext } from '../Context/LoginContext'
+import { AuthContext } from '../Context/AuthContext'
 import { GoogleButton } from '../Components/GoogleButton'
 import { FacebookButton } from '../Components/FacebookButton'
 import { Spinner } from '../StyledComponents/StyledSpinner'
@@ -7,7 +7,7 @@ import { Spinner } from '../StyledComponents/StyledSpinner'
 export const SocialButtonsContainer = ({ loginStyle }) => {
   const [facebookId, setFacebookId] = useState('')
   const [googleId, setGoogleId] = useState('')
-  const { handleAuth } = useContext(LoginContext)
+  const { handleAuth } = useContext(AuthContext)
 
   const handleSocialButton = (token, socialNet) => {
     const user = { token }

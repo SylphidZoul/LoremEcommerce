@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { LoginContextProvider } from './Context/LoginContext'
+import { AuthContextProvider } from './Context/AuthContext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <LoginContextProvider>
+    <AuthContextProvider>
       <App />
-    </LoginContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

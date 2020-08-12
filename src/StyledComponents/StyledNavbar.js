@@ -107,7 +107,7 @@ const Links = css`
     font-size: 16px;
     letter-spacing: 0.5pt;
     transition: all 0.2s ease 0s;
-    font-weight: 500;
+    font-weight: 400;
     opacity: 1;
   }
   @media screen and (min-width: 1024px){

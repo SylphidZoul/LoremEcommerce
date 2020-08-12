@@ -1,13 +1,14 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 import { useLocalStorage } from '../Hooks/useLocalStorage'
 import { useUserData } from '../Hooks/useUserData'
-const LoginContext = createContext()
-const { Provider } = LoginContext
 
-const LoginContextProvider = (props) => {
+const AuthContext = createContext()
+const { Provider } = AuthContext
+
+const AuthContextProvider = ({ children }) => {
   const [token, setToken] = useLocalStorage('token', '')
   const [isAuth, setIsAuth] = useState(() => token !== '')
-  const { userData, setUserData } = useUserData(isAuth, token)
+  const [userData, setUserData] = useUserData(isAuth, token)
   const [error, setError] = useState('')
   const [isFetching, setIsFetching] = useState(false)
 
@@ -19,6 +20,7 @@ const LoginContextProvider = (props) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user)
     }
+
     window.fetch(url, config)
       .then(res => res.json())
       .then((data) => {
@@ -28,29 +30,40 @@ const LoginContextProvider = (props) => {
           setIsAuth(true)
           setToken(data.body.token)
           setError('')
-          setIsFetching(false)
         } else {
           setError(data.body)
-          setIsFetching(false)
         }
+        setIsFetching(false)
+      })
+      .catch((e) => {
+        setError('Error Interno')
       })
   }
+
+  const logOut = () => {
+    window.localStorage.removeItem('token')
+    setIsAuth(false)
+  }
+
+  useEffect(() => {
+    setTimeout(() => setError(''), 5000)
+  }, [error])
 
   const value = {
     isAuth,
     handleAuth,
+    logOut,
     userData,
     error,
     isFetching,
-    setError,
-    setIsAuth
+    setError
   }
 
   return (
     <Provider value={value}>
-      {props.children}
+      {children}
     </Provider>
   )
 }
 
-export { LoginContextProvider, LoginContext }
+export { AuthContextProvider, AuthContext }

@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react'
 import ReactDOM from 'react-dom'
-import { LoginContext } from '../Context/LoginContext'
+import { AuthContext } from '../Context/AuthContext'
 import { LoginComponent } from '../Pages/Login'
 
 const Login = ({ location, history }) => {
-  const { error, isFetching, isAuth, handleAuth } = useContext(LoginContext)
+  const { error, isFetching, isAuth, handleAuth } = useContext(AuthContext)
 
   const closeModal = () => {
     history.push(location.pathname)
@@ -19,6 +19,7 @@ const Login = ({ location, history }) => {
 
   useEffect(() => {
     isAuth && closeModal()
+    // eslint-disable-next-line
   }, [isAuth])
 
   return (

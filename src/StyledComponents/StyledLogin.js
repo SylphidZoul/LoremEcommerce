@@ -50,7 +50,7 @@ export const LoginWrapper = styled.div`
     }
 `
 export const Link = styled(RouterLink)`
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: var(--mainWhite);
     font-weight: 300;
     letter-spacing: 0.8pt;
@@ -63,4 +63,11 @@ export const Link = styled(RouterLink)`
 export const Error = styled.span`
   color: red;
   font-weight: 500;
-  align-self: center`
+  align-self: center;
+  @media screen and (min-width: 468px) {
+    font-size: 0.7rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1rem;
+  }
+  `

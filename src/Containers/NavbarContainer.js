@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { LoginContext } from '../Context/LoginContext'
+import { AuthContext } from '../Context/AuthContext'
 import { useLocation } from 'react-router-dom'
 import { NavbarComponent } from '../Components/Navbar'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const { isAuth, userData } = useContext(LoginContext)
+  const { isAuth, userData } = useContext(AuthContext)
   const Location = useLocation()
 
   const handleOpen = () => {

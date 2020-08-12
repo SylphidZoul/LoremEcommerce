@@ -37,7 +37,7 @@ export const P = styled.p`
   line-height: 110%;
   letter-spacing: 0.8pt;
   opacity: 0.7;
-  font-weight: 500;
+  font-weight: 400;
   @media screen and (min-width: 768px) {
     width: 100%;
     justify-self: start;
