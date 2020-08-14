@@ -50,7 +50,7 @@ export const LoginWrapper = styled.div`
     }
 `
 export const Link = styled(RouterLink)`
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: var(--mainWhite);
     font-weight: 300;
     letter-spacing: 0.8pt;

@@ -29,6 +29,6 @@ export const SectionTitle = styled.h2`
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
-  letter-spacing: 5pt;
+  letter-spacing: 3pt;
   color: ${props => props.color !== 'mainWhite' ? 'var(--mainWhite)' : 'var(--mainSilver)'};
 `

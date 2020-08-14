@@ -50,6 +50,7 @@ export const ToastImg = styled.img`
   grid-area: img;
   min-height: 90%;
   max-height: 100%;
+  border-radius: ${props => props.borderRadius ? '50%' : 0};
 `
 export const ToastTitle = styled.h3`
   grid-area: title;

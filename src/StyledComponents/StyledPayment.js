@@ -23,11 +23,11 @@ export const H2 = styled.h2`
   grid-area: title;
   font-size: 2rem;
   font-weight: 500;
+  animation: ${TranslateLeft} 1500ms ease-in-out forwards;
   @media screen and (min-width: 768px) {
     letter-spacing: 3pt;
     align-self: center;
     justify-self: start;
-    animation: ${TranslateLeft} 1500ms ease-in-out forwards;
   }
 `
 export const P = styled.p`
@@ -38,12 +38,13 @@ export const P = styled.p`
   letter-spacing: 0.8pt;
   opacity: 0.7;
   font-weight: 400;
+  font-size: 14px;
+  animation: ${TranslateLeft} 1500ms ease-in-out forwards;
   @media screen and (min-width: 768px) {
     width: 100%;
     justify-self: start;
     text-align: left;
     line-height: 130%;
-    animation: ${TranslateLeft} 1500ms ease-in-out forwards;
   }
 `
 export const Img = styled.img`

@@ -28,16 +28,16 @@ export const FormTitle = styled.h2`
 export const Input = styled.input`
     width: 98%;
     height: 30px;
-    font-size: 1em;
-    letter-spacing: 1.3pt;
-    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1pt;
+    font-weight: 100;
     background: transparent;
     color: var(--mainWhite);
     border: none;
-    padding: 0 1%;
     border-bottom: 1px solid var(--mainWhite);
     margin-bottom: 8%;
     margin-top: 2%;
+    padding: 0 1%;
     outline: none;
     &::placeholder {
         color: var(--mainWhite);
@@ -45,9 +45,6 @@ export const Input = styled.input`
     }
     &::-ms-input-placeholder {
         color: var(--mainWhite);
-    }
-    @media screen and (min-width: 480px){
-        font-size: 0.9em;
     }
     `
 export const Button = styled.button`

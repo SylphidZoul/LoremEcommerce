@@ -60,6 +60,7 @@ export const AlbumCover = styled.img`
     animation: ${FadeIn} 2000ms ease-out forwards;
 `
 export const Button = styled.button`
+    background: transparent;
     color: var(--mainSilver);
     align-self: flex-end;
     border: none;

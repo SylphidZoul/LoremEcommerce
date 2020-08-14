@@ -11,7 +11,7 @@ export const WelcomeToast = ({ deleteToast, data }) => {
           <Close onClick={deleteToast}>
             x
           </Close>
-          <ToastImg src={data.img ? data.img : MetalHorn} alt='img' />
+          <ToastImg src={data.img ? data.img : MetalHorn} alt='img' borderRadius />
           <ToastTitle alignEnd>
             ¡Bienvenido {data.name}!
           </ToastTitle>

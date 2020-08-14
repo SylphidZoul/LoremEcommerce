@@ -31,8 +31,8 @@ export const NavWrapper = styled.nav`
     ${props => props.scroll && css`
       background: rgba(var(--rgbDark), 0.7);
       background-image: none;
-      height: 70px;
-      padding: 20px 0 0;
+      height: 60px;
+      padding: 0;
     `}
   }
 `
@@ -125,8 +125,9 @@ export const NavLink = styled(RouterNavLink)`
   ${Links}
   text-decoration: none;
   &[aria-current]{
-    color: var(--mainRed);
-    font-weight: 600;
+    background-color: rgba(var(--rgbWhite), 0.7);
+    color: var(--mainSilver);
+    font-weight: 500;
   }
 `
 export const Link = styled(RouterLink)`
