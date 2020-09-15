@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react'
 
-export const useProductsData = (query) => {
+export const useProductsData = (params) => {
   const [data, setData] = useState({})
   const [isFetching, setIsFetching] = useState(true)
 
   useEffect(() => {
-    window.fetch(`http://192.168.100.10:3004/products/${query}`, {
+    window.fetch(`https://lorem-backend.herokuapp.com/products/${params}`, {
     })
       .then(res => res.json())
       .then(response => {
         setData(response.body)
         setIsFetching(false)
       })
-  }, [query])
+  }, [params])
 
   return { data, isFetching }
 }

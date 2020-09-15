@@ -5,20 +5,20 @@ const addProductToCart = (product, state) => {
   )
 
   if (updatedItemIndex < 0) {
-    updatedCart.push({ ...product, quantity: 1 })
+    updatedCart.push({ ...product })
   } else {
     const updatedItem = {
       ...updatedCart[updatedItemIndex]
     }
-    updatedItem.quantity++
+    updatedItem.quantity += product.quantity
     updatedCart[updatedItemIndex] = updatedItem
   }
-  return { cart: updatedCart, last: product }
+  return { ...state, cart: updatedCart, last: product }
 }
 
 const removeProductFromCart = (productId, state) => {
   const updatedCart = [...state.cart]
-  const updatedItemIndex = updatedCart.findIndex(item => item.id === productId)
+  const updatedItemIndex = updatedCart.findIndex(item => item._id === productId)
 
   const updatedItem = {
     ...updatedCart[updatedItemIndex]
@@ -29,7 +29,7 @@ const removeProductFromCart = (productId, state) => {
   } else {
     updatedCart[updatedItemIndex] = updatedItem
   }
-  return { cart: updatedCart }
+  return { ...state, cart: updatedCart }
 }
 
 export const cartReducer = (state, action) => {
@@ -38,6 +38,8 @@ export const cartReducer = (state, action) => {
       return addProductToCart(action.product, state)
     case 'REMOVE_PRODUCT':
       return removeProductFromCart(action.productId, state)
+    case 'GET_PAYMENT':
+      return { ...state, payment: action.payment }
     default:
       return state
   }

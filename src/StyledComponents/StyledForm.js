@@ -28,7 +28,7 @@ export const FormTitle = styled.h2`
 export const Input = styled.input`
     width: 98%;
     height: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     letter-spacing: 1pt;
     font-weight: 100;
     background: transparent;
@@ -58,7 +58,7 @@ export const Button = styled.button`
     cursor: pointer;
     &:hover{
         color: var(--mainWhite);
-        background: var(--mainSilver);
+        background: var(--mainPurple);
     }
     @media screen and (min-width: 480px){
         margin-bottom: 8%;

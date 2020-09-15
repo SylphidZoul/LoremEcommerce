@@ -96,7 +96,8 @@ export const NavUl = styled.ul`
 `
 const Links = css`
   color: var(--mainWhite);
-  font-size: 25px;
+  font-size: 22px;
+  font-weight: 300;
   transition: all 500ms 100ms;
   opacity: ${props => props.open ? 1 : 0};
   @media screen and (min-width: 480px){
@@ -125,9 +126,8 @@ export const NavLink = styled(RouterNavLink)`
   ${Links}
   text-decoration: none;
   &[aria-current]{
-    background-color: rgba(var(--rgbWhite), 0.7);
-    color: var(--mainSilver);
-    font-weight: 500;
+    font-weight: 700;
+    color: white;
   }
 `
 export const Link = styled(RouterLink)`

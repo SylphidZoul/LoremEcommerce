@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Svg = styled.svg`
   height: 75%;
-
   @media screen and (min-width: 768px){
     position: absolute;
     transition: all 200ms ease-in-out;

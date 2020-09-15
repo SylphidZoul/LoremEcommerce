@@ -8,12 +8,12 @@ export const PaymentWrapper = styled.div`
                         'logo'
                         'p';
   grid-gap: 30px;
-  color: var(--mainWhite);
+  color: ${props => props.color};
   justify-items: center;
   @media screen and (min-width: 768px) {
     grid-template: 125px 125px / 1fr 1fr;
     grid-template-areas: 'title logo'
-                        'p logo';
+                         'p logo';
     grid-gap: 0;
     padding-left: 40px;
     padding-bottom: 40px;
@@ -37,7 +37,7 @@ export const P = styled.p`
   line-height: 110%;
   letter-spacing: 0.8pt;
   opacity: 0.7;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   animation: ${TranslateLeft} 1500ms ease-in-out forwards;
   @media screen and (min-width: 768px) {

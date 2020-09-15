@@ -5,7 +5,7 @@ export const NavBackground = styled.div`
   width: 100%;
   overflow: hidden;
   height: 100px;
-  @media screen and (min-width: 468px) {
+  @media screen and (min-width: 480px) {
     height: 80px;
   }
   @media screen and (min-width: 768px) {

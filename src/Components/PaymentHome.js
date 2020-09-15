@@ -3,10 +3,10 @@ import { useLazyLoading } from '../Hooks/useLazyLoading'
 import { PaymentWrapper, H2, P, Img } from '../StyledComponents/StyledPayment'
 import MercadoPago from '../Assets/version-vertical-large.png'
 
-export const PaymentHome = () => {
+export const PaymentHome = ({ color }) => {
   const [show, ref] = useLazyLoading()
   return (
-    <PaymentWrapper ref={ref}>
+    <PaymentWrapper ref={ref} color={color}>
       {
         show &&
           <>

@@ -34,8 +34,8 @@ export const SignupForm = styled.div`
   flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
-  box-shadow: 0px 0px 10px 0px var(--mainSilver);
-  @media screen and (min-width: 468px){
+  box-shadow: 0px 0px 10px 0px var(--mainPurple);
+  @media screen and (min-width: 480px){
     width: 60%;
     max-width: 360px;
   }

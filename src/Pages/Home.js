@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <>
       <Header />
-      <SectionComponent colorTop='mainDark' color='mainWhite' title='Últimos Agregados'>
-        <ProductsContainer />
+      <SectionComponent colorTop='mainDark' color='mainLavander' title='Últimos Agregados'>
+        <ProductsContainer params='query=feed' />
       </SectionComponent>
-      <SectionComponent colorTop='mainWhite' color='mainSilver'>
-        <PaymentHome />
+      <SectionComponent colorTop='mainLavander' color='mainDark' colorGradient='mainViolet' gradient>
+        <PaymentHome color='var(--mainWhite)' />
       </SectionComponent>
     </>
   )

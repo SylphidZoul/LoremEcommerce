@@ -3,15 +3,15 @@ import { CartContext } from '../Context/CartContext'
 import { CartToast } from '../Components/CartToast'
 
 export const CartToastContainer = () => {
-  const { cart } = useContext(CartContext)
+  const { state } = useContext(CartContext)
   const [list, setList] = useState([])
 
   useEffect(() => {
-    if (cart.last !== undefined) {
-      setList([...list, cart.last])
+    if (state.last.name) {
+      setList([...list, state.last])
     }
     // eslint-disable-next-line
-  }, [cart.last])
+  }, [state.last])
 
   useEffect(() => {
     if (list.length) {

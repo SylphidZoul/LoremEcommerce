@@ -9,7 +9,7 @@ export const FormComponent = ({ operation, handleSubmit, isFetching }) => {
       <Form onSubmit={handleSubmit} login>
         <Input placeholder='Ingrese su e-mail' id='email-input' type='email' />
         <Input placeholder='Ingrese su contraseña' id='password-input' type='password' />
-        <Button type='submit'>{isFetching ? <Spinner /> : 'Ingresar'}</Button>
+        <Button type='submit' disabled={isFetching}>{isFetching ? <Spinner /> : 'Ingresar'}</Button>
       </Form>
     )
   } else {
@@ -19,7 +19,7 @@ export const FormComponent = ({ operation, handleSubmit, isFetching }) => {
         <Input placeholder='Ingrese su e-mail' id='email-input' type='email' />
         <Input placeholder='Ingrese su contraseña' id='password-input' type='password' />
         <Input placeholder='Confirme su contraseña' id='password-input2' type='password' />
-        <Button type='submit'>{isFetching ? <Spinner /> : 'Registrarse'}</Button>
+        <Button type='submit' disabled={isFetching}>{isFetching ? <Spinner /> : 'Registrarse'}</Button>
       </Form>
     )
   }

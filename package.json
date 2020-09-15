@@ -11,13 +11,14 @@
   "dependencies": {
     "@meronex/icons": "^2.0.2",
     "prop-types": "^15.7.2",
+    "query-string": "^6.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.1.21",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
     "styled-components": "^5.1.1"
   },
   "scripts": {
