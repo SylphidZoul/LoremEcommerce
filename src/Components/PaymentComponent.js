@@ -13,7 +13,7 @@ const Icons = {
 
 export const PaymentComponent = ({ status, payment, icon }) => {
   const StatusIcon = Icons[icon]
-  console.log(payment)
+
   return (
     <Wrapper>
       <H2>
