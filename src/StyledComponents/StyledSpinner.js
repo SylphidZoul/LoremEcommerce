@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 
 const spin = keyframes`
   from { 
@@ -24,7 +24,7 @@ export const LoadingPageSpinner = styled(Spinner)`
   height: 75px;
   border-width: 10px;
   justify-self: center;
-  top: calc(50vh - 37.5px);
+  ${props => props.fullPage ? css`top: calc(50vh - 37.5px);` : css`margin: 40px 0;`}
 `
 
 export const LoadingPage = styled.div`

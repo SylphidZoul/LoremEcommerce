@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import { useLocation } from 'react-router-dom'
 import { CartContext } from '../Context/CartContext'
 import { PaymentComponent } from '../Components/PaymentComponent'
-import { Spinner } from '../StyledComponents/StyledSpinner'
+import { LoadingPageSpinner } from '../StyledComponents/StyledSpinner'
 import queryString from 'query-string'
 
 export const PaymentContainer = () => {
@@ -48,7 +48,7 @@ export const PaymentContainer = () => {
     <>
       {
         !state.payment.payment_status
-          ? <Spinner />
+          ? <LoadingPageSpinner />
           : <PaymentComponent status={status} payment={state.payment} icon={icon} />
       }
     </>

@@ -3,19 +3,20 @@ import { SearchComponent } from '../Components/Search'
 
 export const Search = ({ onSearch }) => {
   const [searchText, setSearchText] = useState('')
-  const searchRef = useRef(null)
-  const fieldRef = useRef(null)
-  const sortRef = useRef(null)
+  const searchRef = useRef()
+  const fieldRef = useRef()
+  const sortRef = useRef()
 
   useEffect(() => {
     if (searchRef.current) {
-      setTimeout(() => {
+      const tick = setTimeout(() => {
         if (searchText === searchRef.current.value) {
           onSearch(`query=${searchText}&field=${fieldRef.current.value}&sort=${sortRef.current.value}`)
         }
       }, 600)
+      return () => clearTimeout(tick)
     }
-  }, [searchText])
+  }, [searchText, onSearch])
 
   const handleChange = (e) => {
     setSearchText(e.target.value)
@@ -28,12 +29,10 @@ export const Search = ({ onSearch }) => {
 
   return (
     <SearchComponent
-      searchRef={searchRef}
       searchValue={searchText}
-      fieldRef={fieldRef}
-      sortRef={sortRef}
       handleSubmit={handleSubmit}
       handleChange={handleChange}
+      ref={{ searchRef, fieldRef, sortRef }}
     />
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
 import { useLazyLoading } from '../Hooks/useLazyLoading'
-import { PaymentWrapper, H2, P, Img } from '../StyledComponents/StyledPayment'
+import { PaymentWrapper, H2, P, Img } from '../StyledComponents/StyledPaymentBanner'
 import MercadoPago from '../Assets/version-vertical-large.png'
+import PropTypes from 'prop-types'
 
-export const PaymentHome = ({ color }) => {
+export const PaymentBanner = ({ color }) => {
   const [show, ref] = useLazyLoading()
   return (
     <PaymentWrapper ref={ref} color={color}>
@@ -21,4 +22,7 @@ export const PaymentHome = ({ color }) => {
       }
     </PaymentWrapper>
   )
+}
+PaymentBanner.propTypes = {
+  color: PropTypes.string
 }

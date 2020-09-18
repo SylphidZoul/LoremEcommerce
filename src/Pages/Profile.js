@@ -1,24 +1,28 @@
 import React, { useContext } from 'react'
-import { NavBackground } from '../StyledComponents/StyledNavBackground'
+import { ContentWrapper } from '../Components/ContentWrapper'
 import { SectionComponent } from '../Components/SectionComponent'
-import Guitar from '../Components/Guitar'
 import { AuthContext } from '../Context/AuthContext'
 
 const Profile = () => {
   const { userData, logOut } = useContext(AuthContext)
 
   return (
-    <>
-      <NavBackground>
-        <Guitar />
-      </NavBackground>
+    <ContentWrapper
+      title={userData.name}
+      subtitle='Perfil de usuario'
+      background
+    >
       <SectionComponent colorTop='mainDark' color='mainLavander'>
-        <div style={{ height: '700px', width: '100%', background: '#f9f9f9', paddingTop: '400px' }}>
-          <h1>Perfil de {userData.name}</h1>
-          <button onClick={logOut}>Desconectar</button>
+        <div style={{ height: '700px', width: '100%' }}>
+          <h1 style={{ color: 'var(--mainDark)', fontSize: '40px' }}>
+            Perfil de {userData.name}
+          </h1>
+          <button onClick={logOut}>
+            Desconectar
+          </button>
         </div>
       </SectionComponent>
-    </>
+    </ContentWrapper>
   )
 }
 

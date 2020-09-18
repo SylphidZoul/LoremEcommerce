@@ -1,20 +1,20 @@
 import React from 'react'
-import { NavBackground } from '../StyledComponents/StyledNavBackground'
+import { ContentWrapper } from '../Components/ContentWrapper'
 import { SectionComponent } from '../Components/SectionComponent'
-import Guitar from '../Components/Guitar'
 
 const About = () => {
   return (
-    <>
-      <NavBackground>
-        <Guitar />
-      </NavBackground>
+    <ContentWrapper
+      title='Sobre Nosotros'
+      subtitle='¿Quiénes somos y por qué confiar en nosotros?'
+      background
+    >
       <SectionComponent colorTop='mainDark' color='mainLavander'>
-        <div style={{ background: 'red', height: '600px' }}>
-          <h1 style={{ color: 'white', fontSize: '50px' }}>ABOUT US</h1>
+        <div style={{ height: '600px' }}>
+          <h1 style={{ color: 'var(--mainDark)', fontSize: '50px' }}>ABOUT US</h1>
         </div>
       </SectionComponent>
-    </>
+    </ContentWrapper>
   )
 }
 

@@ -18,14 +18,11 @@ export const Wrapper = styled.article`
 export const H2 = styled.h2`
   font-size: 26px;
   font-weight: 500;
-  /* text-align: center; */
   color: var(--mainPurple);
 `
 
 export const ItemsDetail = styled.div`
   display: grid;
-  /* grid-template: 30px 30px / repeat(2, 1fr);
-  grid-template-areas: 'name name' 'quantity price'; */
   justify-items: center;
 `
 export const H3 = styled.h3`

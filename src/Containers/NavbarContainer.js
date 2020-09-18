@@ -9,8 +9,10 @@ export const Navbar = () => {
   const { isAuth, userData } = useContext(AuthContext)
   const Location = useLocation()
 
-  const handleOpen = () => {
-    setIsOpen(!isOpen)
+  const handleLinkClick = (e) => {
+    const tag = e.target.tagName
+    if (tag !== 'DIV' /* burguer */) window.scrollTo(0, 0)
+    if (tag !== 'svg' /* logo */) setIsOpen(!isOpen)
   }
 
   useEffect(() => {
@@ -26,7 +28,7 @@ export const Navbar = () => {
     <NavbarComponent
       isScrolled={isScrolled}
       isOpen={isOpen}
-      handleOpen={handleOpen}
+      onLinkClick={handleLinkClick}
       isAuth={isAuth}
       userName={userData.name}
       currentPath={Location.pathname}

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { Svg } from '../StyledComponents/StyledLogo'
 
 export function Logo (props) {

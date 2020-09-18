@@ -1,6 +1,17 @@
 import React from 'react'
 import { EmptyCart } from './EmptyCart'
-import { CartWrapper, Head, ItemsWrapper, Title, Link, Item, Img, Name, Price, Quantity, Total, RemoveButton, CheckOutButton } from '../StyledComponents/StyledCart'
+import PropTypes from 'prop-types'
+import {
+  CartWrapper,
+  Head,
+  ItemsWrapper,
+  Title, Link,
+  Item, Img,
+  Name, Price,
+  Quantity, Total,
+  RemoveButton,
+  CheckOutButton
+} from '../StyledComponents/StyledCart'
 
 export const CartComponent = ({ empty, total, products, remove, onBuy }) => {
   return (
@@ -59,4 +70,19 @@ export const CartComponent = ({ empty, total, products, remove, onBuy }) => {
       }
     </CartWrapper>
   )
+}
+
+CartComponent.propTypes = {
+  empty: PropTypes.bool.isRequired,
+  total: PropTypes.number.isRequired,
+  products: PropTypes.arrayOf({
+    _id: PropTypes.string,
+    name: PropTypes.string,
+    artist: PropTypes.string,
+    img: PropTypes.string,
+    unitPrice: PropTypes.number,
+    quantity: PropTypes.number
+  }).isRequired,
+  remove: PropTypes.func.isRequired,
+  onBuy: PropTypes.func.isRequired
 }

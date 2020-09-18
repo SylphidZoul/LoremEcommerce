@@ -24,6 +24,7 @@ export const CardContainer = styled.div`
   }
 `
 export const Card = styled.article`
+  position: relative;
   width: 75%;
   max-width: 240px;
   min-height: 200px;

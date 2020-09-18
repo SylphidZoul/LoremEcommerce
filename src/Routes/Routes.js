@@ -16,7 +16,13 @@ const Profile = lazy(() => import('../Pages/Profile'))
 export const Routes = () => {
   return (
     <>
-      <Suspense fallback={<LoadingPage><LoadingPageSpinner /></LoadingPage>}>
+      <Suspense
+        fallback={
+          <LoadingPage>
+            <LoadingPageSpinner fullPage />
+          </LoadingPage>
+        }
+      >
         <Route path='/' component={Login} />
         <Switch>
           <Route path='/' component={Home} exact />

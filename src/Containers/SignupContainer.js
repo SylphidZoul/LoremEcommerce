@@ -7,7 +7,9 @@ const SignupContainer = ({ history, location }) => {
 
   useEffect(() => {
     if (isAuth) {
-      (location.search && location.search !== '?login') ? history.push(location.search.slice(1)) : history.push('/')
+      (location.search && location.search !== '?login')
+        ? history.push(location.search.slice(1))
+        : history.push('/')
     }
   })
 

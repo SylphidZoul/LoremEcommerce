@@ -4,9 +4,10 @@ import { useProductsData } from '../Hooks/useProductsData'
 import { CartContext } from '../Context/CartContext'
 import { AuthContext } from '../Context/AuthContext'
 import { Details } from '../Components/Details'
+import { LoadingPageSpinner } from '../StyledComponents/StyledSpinner'
 
 export const DetailsContainer = ({ product }) => {
-  const { data, isFetching } = useProductsData(`id=${product}`)
+  const { products, isFetching } = useProductsData(`id=${product}`)
   const { addProduct } = useContext(CartContext)
   const { isAuth } = useContext(AuthContext)
   const [release, setRelease] = useState('')
@@ -26,27 +27,28 @@ export const DetailsContainer = ({ product }) => {
     if (!isAuth) {
       return History.push(`${Location.pathname}?login`)
     }
-    const product = data
-    product.quantity = quantity
+    const product = { ...products[0], quantity }
     addProduct(product)
   }
 
   useEffect(() => {
     if (!isFetching) {
-      const formatedDate = data.release.split('T')
+      const formatedDate = products[0].release.split('T')
       setRelease(formatedDate[0])
     }
-  }, [isFetching, data])
+  }, [isFetching, products])
 
   return (
-    !isFetching &&
-      <Details
-        product={data}
-        add={addToCart}
-        quantity={quantity}
-        handleQuantity={handleQuantity}
-        release={release}
-      />
-
+    isFetching
+      ? <LoadingPageSpinner />
+      : (
+        <Details
+          product={products[0]}
+          add={addToCart}
+          quantity={quantity}
+          handleQuantity={handleQuantity}
+          release={release}
+        />
+      )
   )
 }

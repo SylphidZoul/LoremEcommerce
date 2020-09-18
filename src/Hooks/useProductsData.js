@@ -1,18 +1,49 @@
-import { useState, useEffect } from 'react'
+import { useReducer, useEffect, useRef, useCallback } from 'react'
+import { initialState, productReducer } from '../Reducers/ProductsReducer'
 
 export const useProductsData = (params) => {
-  const [data, setData] = useState({})
-  const [isFetching, setIsFetching] = useState(true)
+  const [state, dispatch] = useReducer(productReducer, initialState)
+  const { products, isFetching, hasMore, pageNumber, query } = state
+  const observer = useRef()
+
+  const lastProductRef = useCallback(node => {
+    if (isFetching) return
+    if (observer.current) observer.current.disconnect()
+    observer.current = new window.IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && hasMore) {
+        dispatch({ type: 'ADD_PAGE' })
+      }
+    })
+    if (node) observer.current.observe(node)
+  }, [isFetching, hasMore])
 
   useEffect(() => {
-    window.fetch(`https://lorem-backend.herokuapp.com/products/${params}`, {
-    })
-      .then(res => res.json())
-      .then(response => {
-        setData(response.body)
-        setIsFetching(false)
-      })
+    dispatch({ type: 'UPDATE_QUERY', params })
+    // eslint-disable-next-line
+  }, [pageNumber])
+
+  useEffect(() => {
+    dispatch({ type: 'RESET' })
+    dispatch({ type: 'UPDATE_QUERY', params, reseted: true })
   }, [params])
 
-  return { data, isFetching }
+  useEffect(() => {
+    let isMounted = true
+    if (query) {
+      dispatch({ type: 'FETCHING' })
+      window.fetch(`http://localhost:3004/products/${query}`, {
+      })
+        .then(res => res.json())
+        .then(response => {
+          if (isMounted) {
+            const products = response.body
+            dispatch({ type: 'UPDATE_PRODUCTS', products })
+          }
+        })
+        .catch(e => console.log('Ha habido un error con el servidor'))
+    }
+    return () => (isMounted = false)
+  }, [query])
+
+  return { products, isFetching, lastProductRef }
 }

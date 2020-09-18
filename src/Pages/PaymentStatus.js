@@ -1,19 +1,19 @@
 import React from 'react'
 import { PaymentContainer } from '../Containers/PaymentContainer'
-import { NavBackground } from '../StyledComponents/StyledNavBackground'
+import { ContentWrapper } from '../Components/ContentWrapper'
 import { SectionComponent } from '../Components/SectionComponent'
-import Guitar from '../Components/Guitar'
 
 const PaymentStatus = () => {
   return (
-    <>
-      <NavBackground>
-        <Guitar />
-      </NavBackground>
+    <ContentWrapper
+      title='Resultado del pago'
+      subtitle='Detalles de la transacción'
+      background
+    >
       <SectionComponent colorTop='mainDark' color='mainLavander'>
         <PaymentContainer />
       </SectionComponent>
-    </>
+    </ContentWrapper>
   )
 }
 

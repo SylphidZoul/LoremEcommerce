@@ -18,7 +18,7 @@ export const LoginWrapper = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   box-shadow: 0px 0px 4px 2px var(--mainPurple);
-  background: var(--mainDark);
+  background: rgba(var(--rgbDark), 0.93);
   background-image: url(${Guitar});
   background-size: contain;
   background-repeat: no-repeat;

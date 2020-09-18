@@ -1,6 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ToastList, Toast, ToastImg, ToastTitle, ToastMessage, Close } from '../StyledComponents/StyledToast'
+import PropTypes from 'prop-types'
+import {
+  ToastList,
+  Toast,
+  ToastImg,
+  ToastTitle,
+  ToastMessage,
+  Close
+} from '../StyledComponents/StyledToast'
 
 export const CartToast = ({ list, deleteToast }) => {
   return (
@@ -32,4 +40,15 @@ export const CartToast = ({ list, deleteToast }) => {
       )
     )
   )
+}
+CartToast.propTypes = {
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string,
+      name: PropTypes.string,
+      artist: PropTypes.string,
+      img: PropTypes.string
+    })
+  ).isRequired,
+  deleteToast: PropTypes.func.isRequired
 }

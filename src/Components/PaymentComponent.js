@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import FcApproval from '@meronex/icons/fc/FcApproval'
 import FcOvertime from '@meronex/icons/fc/FcOvertime'
 import FcCancel from '@meronex/icons/fc/FcCancel'
@@ -12,7 +13,7 @@ const Icons = {
 
 export const PaymentComponent = ({ status, payment, icon }) => {
   const StatusIcon = Icons[icon]
-
+  console.log(payment)
   return (
     <Wrapper>
       <H2>
@@ -32,6 +33,12 @@ export const PaymentComponent = ({ status, payment, icon }) => {
         {payment.transaction.id}
       </P>
       <H3>
+        Comprador:
+      </H3>
+      <P>
+        {payment.transaction.payer.email}
+      </P>
+      <H3>
         Productos:
       </H3>
       {payment.items.map((item) => {
@@ -49,4 +56,27 @@ export const PaymentComponent = ({ status, payment, icon }) => {
       </P>
     </Wrapper>
   )
+}
+PaymentComponent.propTypes = {
+  status: PropTypes.string.isRequired,
+  payment: PropTypes.shape({
+    transaction: PropTypes.shape({
+      id: PropTypes.number,
+      payer: PropTypes.shape({
+        email: PropTypes.string
+      })
+    }),
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        items: PropTypes.shape({
+          _id: PropTypes._id,
+          name: PropTypes.string,
+          unitPrice: PropTypes.number
+        }),
+        quantity: PropTypes.number
+      })
+    ),
+    total: PropTypes.number
+  }).isRequired,
+  icon: PropTypes.string.isRequired
 }

@@ -8,7 +8,7 @@ import { LoadingPageSpinner } from '../StyledComponents/StyledSpinner'
 import { CardContainer } from '../StyledComponents/StyledProducts'
 
 export const ProductsContainer = ({ params }) => {
-  const { data, isFetching } = useProductsData(params)
+  const { products, isFetching, lastProductRef } = useProductsData(params)
   const { addProduct } = useContext(CartContext)
   const { isAuth } = useContext(AuthContext)
   const Location = useLocation()
@@ -23,25 +23,31 @@ export const ProductsContainer = ({ params }) => {
   }
 
   return (
-    isFetching
-      ? <LoadingPageSpinner />
-      : (
-        <CardContainer>
-          {data.length === 0 && <h1>No se encontraron resultados</h1>}
-          {data.map((product) => {
-            return (
-              <ProductCard
-                key={product._id}
-                id={product._id}
-                img={product.img}
-                name={product.name}
-                unitPrice={product.unitPrice}
-                artist={product.artist}
-                addProduct={() => handleButton(product)}
-              />
-            )
-          })}
-        </CardContainer>
-      )
+    <>
+      <CardContainer>
+        {
+          (products.length === 0 && !isFetching) &&
+            <h2>No se encontraron resultados</h2>
+        }
+        {products.map((product, index) => {
+          return (
+            <ProductCard
+              key={product._id}
+              id={product._id}
+              img={product.img}
+              name={product.name}
+              unitPrice={product.unitPrice}
+              artist={product.artist}
+              addProduct={() => handleButton(product)}
+              {... products.length === index + 1 && { ref: lastProductRef }}
+            />
+          )
+        })}
+      </CardContainer>
+      {
+        isFetching &&
+          <LoadingPageSpinner />
+      }
+    </>
   )
 }

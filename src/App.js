@@ -1,7 +1,7 @@
 import React from 'react'
+import './App.css'
 import { BrowserRouter } from 'react-router-dom'
 import GlobalStyle from './StyledComponents/GlobalStyles'
-import './App.css'
 import { CartContextProvider } from './Context/CartContext'
 import { Navbar } from './Containers/NavbarContainer'
 import { Routes } from './Routes/Routes'

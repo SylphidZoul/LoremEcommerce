@@ -1,15 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { SearchForm, SearchBar, SearchBox, SearchButton, SearchLabel, SearchSelect } from '../StyledComponents/StyledSearch'
 import BsSearch from '@meronex/icons/bs/BsSearch'
+import PropTypes from 'prop-types'
 
-export const SearchComponent = ({
-  searchRef,
-  searchValue,
-  fieldRef,
-  sortRef,
-  handleSubmit,
-  handleChange
-}) => {
+export const SearchComponent = forwardRef((
+  { searchValue, handleSubmit, handleChange },
+  { searchRef, fieldRef, sortRef }) => {
   return (
     <SearchForm onSubmit={handleSubmit}>
       <SearchBar>
@@ -45,4 +41,9 @@ export const SearchComponent = ({
       </SearchSelect>
     </SearchForm>
   )
+})
+SearchComponent.propTypes = {
+  searchValue: PropTypes.string.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired
 }

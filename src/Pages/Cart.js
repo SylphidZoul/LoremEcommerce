@@ -1,23 +1,23 @@
 import React from 'react'
 import { CartContainer } from '../Containers/CartContainer'
-import { NavBackground } from '../StyledComponents/StyledNavBackground'
+import { ContentWrapper } from '../Components/ContentWrapper'
 import { SectionComponent } from '../Components/SectionComponent'
-import { PaymentHome } from '../Components/PaymentHome'
-import Guitar from '../Components/Guitar'
+import { PaymentBanner } from '../Components/PaymentBanner'
 
 const Cart = () => {
   return (
-    <>
-      <NavBackground>
-        <Guitar />
-      </NavBackground>
+    <ContentWrapper
+      title='Carrito de compras'
+      subtitle='Tus albúms'
+      background
+    >
       <SectionComponent colorTop='mainDark' color='mainLavander'>
         <CartContainer />
       </SectionComponent>
       <SectionComponent colorTop='mainLavander' color='mainWhite'>
-        <PaymentHome color='var(--mainDark)' />
+        <PaymentBanner color='var(--mainDark)' />
       </SectionComponent>
-    </>
+    </ContentWrapper>
   )
 }
 export default Cart

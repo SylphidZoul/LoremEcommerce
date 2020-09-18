@@ -8,23 +8,23 @@ import BsPerson from '@meronex/icons/bs/BsPerson'
 import AiOutlineShop from '@meronex/icons/ai/AiOutlineShop'
 import AiOutlineShoppingCart from '@meronex/icons/ai/AiOutlineShoppingCart'
 
-export const NavbarComponent = ({ isScrolled, isOpen, handleOpen, isAuth, userName, currentPath }) => {
+export const NavbarComponent = ({ isScrolled, isOpen, onLinkClick, isAuth, userName, currentPath }) => {
   return (
     <NavWrapper scroll={isScrolled}>
-      <Burger open={isOpen} onClick={handleOpen} />
+      <Burger open={isOpen} onClick={onLinkClick} />
       <LogoLink to='/'>
-        <Logo scroll={isScrolled} />
+        <Logo scroll={isScrolled} onClick={onLinkClick} />
       </LogoLink>
       <NavUl open={isOpen} scroll={isScrolled}>
         <li>
-          <NavLink open={isOpen} to='/about' onClick={handleOpen}>
+          <NavLink open={isOpen} to='/about' onClick={onLinkClick}>
             <BsPeople />
             &nbsp;
             Sobre Nosotros
           </NavLink>
         </li>
         <li>
-          <NavLink open={isOpen} to='/products' onClick={handleOpen}>
+          <NavLink open={isOpen} to='/products' onClick={onLinkClick}>
             <AiOutlineShop />
             &nbsp;
             Productos
@@ -33,7 +33,7 @@ export const NavbarComponent = ({ isScrolled, isOpen, handleOpen, isAuth, userNa
         <li>
           <NavLink
             open={isOpen}
-            onClick={handleOpen}
+            onClick={onLinkClick}
             to={{ pathname: '/cart', state: { from: currentPath } }}
           >
             <AiOutlineShoppingCart />
@@ -47,7 +47,7 @@ export const NavbarComponent = ({ isScrolled, isOpen, handleOpen, isAuth, userNa
               ? (
                 <NavLink
                   open={isOpen}
-                  onClick={handleOpen}
+                  onClick={onLinkClick}
                   to={{ pathname: '/profile', state: { from: currentPath } }}
                 >
                   <BsPerson />
@@ -58,7 +58,7 @@ export const NavbarComponent = ({ isScrolled, isOpen, handleOpen, isAuth, userNa
               : (
                 <Link
                   open={isOpen}
-                  onClick={handleOpen}
+                  onClick={onLinkClick}
                   to={{
                     pathname: currentPath, search: '?login'
                   }}
@@ -77,7 +77,7 @@ export const NavbarComponent = ({ isScrolled, isOpen, handleOpen, isAuth, userNa
 NavbarComponent.propTypes = {
   isScrolled: PropTypes.bool.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  handleOpen: PropTypes.func.isRequired,
+  onLinkClick: PropTypes.func.isRequired,
   isAuth: PropTypes.bool.isRequired,
   userName: PropTypes.string,
   currentPath: PropTypes.string.isRequired

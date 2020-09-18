@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { SectionComponent } from '../Components/SectionComponent'
 import { ProductsContainer } from '../Containers/ProductsContainer'
-import { NavBackground } from '../StyledComponents/StyledNavBackground'
 import { Search } from '../Containers/SearchContainer'
-import Guitar from '../Components/Guitar'
+import { ContentWrapper } from '../Components/ContentWrapper'
 
 const Products = () => {
   const [params, setParams] = useState('query=&field=all&sort=latest')
@@ -14,15 +13,16 @@ const Products = () => {
   }
 
   return (
-    <>
-      <NavBackground>
-        <Guitar />
-      </NavBackground>
+    <ContentWrapper
+      title='Nuestros Albúms'
+      subtitle='¡Los albúms de rock más pedidos!'
+      background
+    >
       <SectionComponent colorTop='mainDark' color='mainLavander'>
         <Search onSearch={handleQuery} />
         <ProductsContainer params={params} />
       </SectionComponent>
-    </>
+    </ContentWrapper>
   )
 }
 
