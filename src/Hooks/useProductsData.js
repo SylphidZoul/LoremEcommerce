@@ -31,7 +31,7 @@ export const useProductsData = (params) => {
     let isMounted = true
     if (query) {
       dispatch({ type: 'FETCHING' })
-      window.fetch(`http://192.168.100.10:3004/products/${query}`, {
+      window.fetch(`https://lorem-backend.herokuapp.com/products/${query}`, {
       })
         .then(res => res.json())
         .then(response => {
