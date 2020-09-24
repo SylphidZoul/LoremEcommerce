@@ -15,7 +15,7 @@ export const NavWrapper = styled.nav`
   ${props => props.scroll && css`
     height: 60px;
     background: rgba(var(--rgbDark), 0.7);
-    border-bottom: 1px solid var(--mainWhite);
+    border-bottom: 1px solid var(--mainSilver);
     box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.5);
   `}
   @media screen and (min-width: 480px){
@@ -80,7 +80,7 @@ export const NavUl = styled.ul`
     visibility: visible;
     padding: 0 0 20px;
     transform: none;
-    border-bottom: ${props => props.scroll ? 'none' : '1px solid var(--mainWhite)'};
+    border-bottom: ${props => props.scroll ? 'none' : '1px solid var(--mainSilver)'};
     align-self: ${props => props.scroll ? 'flex-end' : 'center'};
     transition: all 200ms ease-in-out;
     &::before {
@@ -95,11 +95,13 @@ export const NavUl = styled.ul`
   }  
 `
 const Links = css`
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   font-size: 22px;
   font-weight: 300;
   transition: all 500ms 100ms;
   opacity: ${props => props.open ? 1 : 0};
+  padding: 5px 12px 4px;
+  border-radius: 5px;
   @media screen and (min-width: 480px){
     letter-spacing: 2pt;
     font-size: 26px;
@@ -112,10 +114,8 @@ const Links = css`
     opacity: 1;
   }
   @media screen and (min-width: 1024px){
-    padding: 8px 12px 7px;
-    border-radius: 5px;
     &:hover{
-      background-color: var(--mainWhite);
+      background-color: var(--mainSilver);
       color: var(--mainDark);   
       cursor: pointer;
     }
@@ -126,8 +126,9 @@ export const NavLink = styled(RouterNavLink)`
   ${Links}
   text-decoration: none;
   &[aria-current]{
-    font-weight: 700;
-    color: white;
+    font-weight: 600;
+    border-right: 1px solid var(--mainSilver);
+    border-left: 1px solid var(--mainSilver);
   }
 `
 export const Link = styled(RouterLink)`

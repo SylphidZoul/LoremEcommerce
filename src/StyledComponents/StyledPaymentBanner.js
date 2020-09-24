@@ -24,6 +24,7 @@ export const H2 = styled.h2`
   font-size: 2rem;
   font-weight: 500;
   animation: ${TranslateLeft} 1500ms ease-in-out forwards;
+  color: var(--mainPurple);
   @media screen and (min-width: 768px) {
     letter-spacing: 3pt;
     align-self: center;
@@ -35,9 +36,9 @@ export const P = styled.p`
   text-align: center;
   grid-area: p;
   line-height: 110%;
-  letter-spacing: 0.8pt;
+  letter-spacing: 0;
   opacity: 0.7;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   animation: ${TranslateLeft} 1500ms ease-in-out forwards;
   @media screen and (min-width: 768px) {

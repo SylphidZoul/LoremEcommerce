@@ -1,24 +1,20 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Section = styled.section`
   background: linear-gradient(180deg,
-    var(--${props => props.colorTop}) 2px,
+    var(--${props => props.colorTop ? props.colorTop : props.color}) 2px,
     var(--${props => props.color}) 3px,
     var(--${props => props.color}));
+  min-height: 445px;
+  padding-top: ${props => props.colorTop ? '0' : '30px'};
 `
 export const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: minmax(auto, 1024px);
   justify-content: center;
-  row-gap: 50px;
+  row-gap: 40px;
   padding: 20px 0;
   overflow-x: hidden;
-  ${props => props.gradient &&
-    css`background-image: linear-gradient(180deg,
-      var(--${props => props.color}),
-      var(--${props => props.colorGradient}),
-      var(--${props => props.color}));`
-  }
 `
 
 export const Divider = styled.div`
@@ -31,9 +27,10 @@ export const Divider = styled.div`
 `
 
 export const SectionTitle = styled.h2`
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 40px;
+  font-weight: 400;
   text-align: center;
-  letter-spacing: 3pt;
-  color: ${props => props.color !== 'mainLavander' ? 'var(--mainWhite)' : 'var(--mainPurple)'};
+  letter-spacing: 10px;
+  font-family: 'Metal Mania';
+  color: ${props => props.color !== 'mainWhite' ? 'var(--mainSilver)' : 'var(--mainPurple)'};
 `

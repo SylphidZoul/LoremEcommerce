@@ -10,7 +10,7 @@ export const Form = styled.form`
   }
 `
 export const FormTitle = styled.h2`
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   font-weight: 500;
   text-align: center;
   font-size: 2em;
@@ -33,32 +33,33 @@ export const Input = styled.input`
   letter-spacing: 1pt;
   font-weight: 300;
   background: transparent;
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   border: none;
-  border-bottom: 1px solid var(--mainWhite);
+  border-bottom: 1px solid var(--mainSilver);
   margin-bottom: 8%;
   margin-top: 2%;
   padding: 0 0.5%;
   outline: none;
   &::placeholder {
-    color: var(--mainWhite);
+    color: var(--mainSilver);
     opacity: 1;
   }
   &::-ms-input-placeholder {
-    color: var(--mainWhite);
+    color: var(--mainSilver);
   }
 `
 export const Button = styled.button`
   width: 100%;
-  background: var(--mainWhite);
+  background: var(--mainSilver);
   color: var(--mainDark);
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 8px 0;
+  min-height: 44px;
   border: none;
   border-radius: 500px;
   cursor: pointer;
   &:hover{
-    color: var(--mainWhite);
+    color: var(--mainSilver);
     background: var(--mainPurple);
   }
   @media screen and (min-width: 480px){

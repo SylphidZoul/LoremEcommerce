@@ -26,7 +26,7 @@ export const HeaderWrapper = styled.header`
 export const Title = styled.h1`
   text-align: center;
   font-size: 2em;
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   letter-spacing: 2pt;
   font-weight: 500;
   @media (min-width: 1000px){
@@ -38,7 +38,7 @@ export const SubTitle = styled.h3`
   width: 80%;
   max-width: 630px;
   font-size: 1em;
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   font-weight: 400;
   line-height: 1.5;
   text-align: center;
@@ -49,9 +49,9 @@ export const SubTitle = styled.h3`
 export const HeaderButton = styled.div`
   font-size: 1.8em;
   text-align: center;
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   padding: 7%;
-  border: 1px solid var(--mainWhite);
+  border: 1px solid var(--mainSilver);
   border-radius: 1px;
   transition: all 250ms ease-in-out;
   letter-spacing: 2pt;
@@ -63,7 +63,7 @@ export const HeaderButton = styled.div`
     padding: 2%;
     cursor: pointer;
     &:hover {
-      background: var(--mainWhite);
+      background: var(--mainSilver);
       mix-blend-mode: screen;
       color: black;
     }

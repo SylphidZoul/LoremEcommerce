@@ -5,39 +5,40 @@ export const CartWrapper = styled.article`
   position: relative;
   display: grid;
   grid-template-rows: 70px;
-  width: 100%;
-  color: var(--mainDark);
-  padding: 10px;
   row-gap: 20px;
+  width: 100%;
+  padding: 10px;
+  color: var(--mainDark);
   @media screen and (min-width: 480px) {
-    background: var(--mainWhite);
-    border: 1px solid rgba(var(--rgbDark), 0.2);
-    border-radius: 5px;
-    width: 65%;
     justify-self: center;
+    width: 65%;
+    /* background: var(--mainSilver); */
+    /* border: 1px solid rgba(var(--rgbDark), 0.2);
+    border-radius: 5px; */
   }
   @media screen and (min-width: 768px) {
-    padding: 10px 20px;
     width: 75%;
+    padding: 10px 20px;
   }
 `
 export const Head = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  flex-direction: column;
 `
 export const Title = styled.h3`
-  font-weight: 500;
-  letter-spacing: 1pt;
-  font-size: 30px;
   padding: 10px;
+  letter-spacing: 1pt;
+  font-weight: 500;
+  font-size: 30px;
   text-align: center;
+  color: var(--mainPurple);
   @media screen and (min-width: 480px) {
     font-size: 24px;
   }
   @media screen and (min-width: 768px) {
-    font-size: 30px;
+    font-size: 40px;
   }
 `
 export const Link = styled(RouterLink)`
@@ -54,37 +55,40 @@ export const ItemsWrapper = styled.div`
   flex-direction: column;
 `
 export const Item = styled.div`
-  display: grid;
   position: relative;
-  background: rgba(230, 230, 230, 0.6);
+  display: grid;
   grid-template: repeat(2, 1fr) / 100px repeat(2, 1fr);
   grid-template-areas: 'img name name' 'img price quantity';
   width: 100%;
-  border: 1px solid rgba(var(--rgbDark), 0.1); 
+  /* background: var(--mainLavander); */
   align-items: center;
   justify-items: center;
+  /* padding-bottom: 10px; */
+  border-bottom: 1px solid rgba(var(--rgbDark), 0.4); 
+  margin-bottom: 10px;
   @media screen and (min-width: 768px) {
     grid-template: 1fr / 100px repeat(3, 1fr);
-    grid-template-areas: 'img price name quantity';
+    grid-template-areas: 'img quantity name price';
   }
 `
 
 export const Img = styled.img`
-  width: 100%;
   grid-area: img;
+  width: 100%;
+  height: 100px;
 `
 export const Name = styled.h3`
+  grid-area: name;
   font-size: 12px;
   text-align: center;
   font-weight: 500;
-  grid-area: name;
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 `
 export const Price = styled.h3`
-  letter-spacing: 0.8pt;
   grid-area: price;
+  letter-spacing: 0.8pt;
   color: var(--mainPurple);
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -92,36 +96,36 @@ export const Price = styled.h3`
   }
 `
 export const Quantity = styled.p`
-  font-size: 12px;
   grid-area: quantity;
+  font-size: 12px;
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 `
 export const Total = styled.div`
-  width: 100%;
-  background: rgba(230, 230, 230, 0.6);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
+  width: 100%;
   height: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(var(--rgbDark), 0.3); 
   font-weight: 400;
-  border: 1px solid rgba(var(--rgbDark), 0.1); 
   @media screen and (min-width: 768px) {
-    font-size: 20px;
+    padding: 10px 70px 20px;
     align-items: center;
+    font-size: 20px;
   }
 `
 export const RemoveButton = styled.button`
-  border: none;
-  outline: none;
-  font-size: 14px;
-  font-weight: 600;
   position: absolute;
   top: 2px;
   right: 2px;
+  border: none;
+  outline: none;
   background: transparent;
+  font-size: 14px;
+  font-weight: 600;
   @media screen and (min-width: 1024px) {
     cursor: pointer;
   }
@@ -129,12 +133,12 @@ export const RemoveButton = styled.button`
 
 export const CheckOutButton = styled.button`
   border: none;
-  font-weight: 600;
-  background: var(--mainPurple);
-  font-size: 18px;
-  border-radius: 5px;
-  color: var(--mainWhite);
   padding: 10px;
+  background: var(--mainPurple);
+  border-radius: 5px;
+  color: var(--mainSilver);
+  font-size: 18px;
+  font-weight: 600;
   @media screen and (min-width: 768px) {
     width: 65%;
     justify-self: center;

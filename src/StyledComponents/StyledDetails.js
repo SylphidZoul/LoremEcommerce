@@ -28,19 +28,21 @@ export const DetailWrapper = styled.div`
                          'cartbutton logo'
                          'description description'
                          'details tracklist';
-    padding: 40px;
-    background: var(--mainWhite);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
   }
 `
 export const NameDiv = styled.div`
   grid-area: name;
 `
 export const QuantityDiv = styled.div`
-  grid-area: quantity;  
+  grid-area: quantity;
 `
 export const DescriptionDiv = styled.div`
-  grid-area: description;  
+  grid-area: description;
+  padding: 15px 0 10px;
+  border: 1px solid rgba(var(--rgbDark), 0.2);
+  border-left: none;
+  border-right: none;
 `
 export const DetailsDiv = styled.div`
   grid-area: details; 
@@ -53,15 +55,16 @@ export const Img = styled.img`
   justify-self: center;
   box-shadow: 0px 0px 4px 2px var(--mainPurple);
   grid-area: logo;
+  min-width: 90%;
   @media screen and (min-width: 768px) {
-    padding: 20px;
+    min-height: 240px;
+    min-width: initial;
     justify-self: start;
   }
 `
 export const Name = styled.h2`
   font-size: 32px;
   color: var(--mainPurple);
-  
 `
 export const Artist = styled.h3`
   letter-spacing: 2pt;
@@ -71,8 +74,10 @@ export const QuantityButton = styled.button`
   width: 40px;
   font-size: 30px;
   border: none;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   background: var(--mainPurple);
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   cursor: pointer;
 `
 export const QuantityInput = styled.input`
@@ -91,9 +96,10 @@ export const QuantityInput = styled.input`
   }
 `
 export const Text = styled.p`
-  line-height: 120%;
   align-self: center;
   letter-spacing: 0.5pt;
+  line-height: 20px;
+  font-size: 14px;
 `
 export const CartButton = styled.button`
   width: 100%;
@@ -102,7 +108,7 @@ export const CartButton = styled.button`
   background: var(--mainPurple);
   font-size: 22px;
   border-radius: 5px;
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   padding: 10px;
   grid-area: cartbutton;
   @media screen and (min-width: 480px) {
@@ -125,4 +131,5 @@ export const DataField = styled.h6`
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 5px;
+  color: var(--mainPurple);
 `

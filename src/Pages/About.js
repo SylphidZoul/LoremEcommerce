@@ -9,7 +9,7 @@ const About = () => {
       subtitle='¿Quiénes somos y por qué confiar en nosotros?'
       background
     >
-      <SectionComponent colorTop='mainDark' color='mainLavander'>
+      <SectionComponent color='mainLavander'>
         <div style={{ height: '600px' }}>
           <h1 style={{ color: 'var(--mainDark)', fontSize: '50px' }}>ABOUT US</h1>
         </div>

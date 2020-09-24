@@ -18,9 +18,7 @@ export const CardContainer = styled.div`
     grid-auto-rows: minmax(auto, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 50px;
-    background: var(--mainWhite);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 40px 0;
+    padding: 0 0 40px;
   }
 `
 export const Card = styled.article`
@@ -33,20 +31,23 @@ export const Card = styled.article`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: #EEE;
-  box-shadow: 0px 0px 5px 1px rgba(var(--rgbPurple),0.6);
+  /* background: #EEE; */
+  /* box-shadow: 0px 0px 5px 1px rgba(var(--rgbPurple),0.6); */
   transition: all 300ms ease;
+  overflow: hidden;
   cursor: pointer;
-  &:hover {
+  border-bottom: 2px solid rgba(var(--rgbPurple), 0.4);
+  padding-bottom: 20px;
+  &:hover img{
       transform: scale(1.05);
-      box-shadow: 0px 0px 7px 2px rgba(var(--rgbPurple),0.6);
+      /* box-shadow: 0px 0px 7px 2px rgba(var(--rgbPurple),0.6); */
   }
 `
 export const CardText = styled.p`
   line-height: 1.4;
   font-weight: 400;
   text-align: center;
-  color: var(--mainDark);
+  color: black;
   @media screen and (min-width: 768px){
       font-size: 0.9em;
   }
@@ -63,23 +64,25 @@ export const Price = styled.h3`
   }
 `
 export const AlbumCover = styled.img`
-  width: 100%;
+  min-height: 240px;
   animation: ${FadeIn} 2000ms ease-out forwards;
+  transition: all 300ms ease-out;
 `
 export const Button = styled.button`
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 60px;
   background: transparent;
   color: var(--mainPurple);
   border: none;
   @media screen and (min-width: 768px) {
-    position: relative;
-    align-self: flex-end;
+    /* position: relative;
+    align-self: flex-end; */
+    bottom: 60px;
     cursor: pointer;
     &:hover {
       background: var(--mainPurple);
-      color: var(--mainWhite);
+      color: var(--mainSilver);
     }
   }
 `

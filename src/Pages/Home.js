@@ -12,11 +12,11 @@ const Home = () => {
       subtitle='Los mejores albúms de rock los encontrás acá.'
     >
       <Header />
-      <SectionComponent colorTop='mainDark' color='mainLavander' title='Últimos Agregados'>
+      <SectionComponent colorTop='mainDark' color='mainWhite' title='Últimos Agregados'>
         <ProductsContainer params='query=feed' />
       </SectionComponent>
-      <SectionComponent colorTop='mainLavander' color='mainDark' colorGradient='mainViolet' gradient>
-        <PaymentBanner color='var(--mainWhite)' />
+      <SectionComponent colorTop='mainWhite' color='mainSilver'>
+        <PaymentBanner color='var(--mainDark)' />
       </SectionComponent>
     </ContentWrapper>
   )

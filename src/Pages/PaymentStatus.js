@@ -10,7 +10,7 @@ const PaymentStatus = () => {
       subtitle='Detalles de la transacción'
       background
     >
-      <SectionComponent colorTop='mainDark' color='mainLavander'>
+      <SectionComponent color='mainLavander'>
         <PaymentContainer />
       </SectionComponent>
     </ContentWrapper>

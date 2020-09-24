@@ -7,13 +7,13 @@ export const WelcomeToastContainer = () => {
   const { isAuth, userData } = useContext(AuthContext)
 
   useEffect(() => {
-    if (isAuth) {
+    if (isAuth && userData) {
       setShow(true)
       setTimeout(() => {
         deleteToast()
       }, 3000)
     }
-  }, [isAuth])
+  }, [isAuth, userData])
 
   const deleteToast = () => {
     setShow(false)

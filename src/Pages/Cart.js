@@ -11,10 +11,10 @@ const Cart = () => {
       subtitle='Tus albúms'
       background
     >
-      <SectionComponent colorTop='mainDark' color='mainLavander'>
+      <SectionComponent color='mainSilver'>
         <CartContainer />
       </SectionComponent>
-      <SectionComponent colorTop='mainLavander' color='mainWhite'>
+      <SectionComponent colorTop='mainSilver' color='mainWhite'>
         <PaymentBanner color='var(--mainDark)' />
       </SectionComponent>
     </ContentWrapper>

@@ -41,15 +41,16 @@ export const Toast = styled.div`
     transparent 1px,
     transparent 16px),
     linear-gradient(90deg, hsl(72,13%,7%),hsl(72,13%,7%));
-  color: var(--mainWhite);
+  color: var(--mainSilver);
   margin-top: 15px;
   animation: ${TranslateRight} 1000ms ease-out forwards;
   overflow-x: hidden;
 `
 export const ToastImg = styled.img`
   grid-area: img;
-  min-height: 90%;
-  max-height: 100%;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
 `
 export const ToastTitle = styled.h3`
   grid-area: title;

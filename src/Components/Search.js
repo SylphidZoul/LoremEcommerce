@@ -32,7 +32,7 @@ export const SearchComponent = forwardRef((
       <SearchLabel htmlFor='sortType' Type='sortTitle'>
         Ordenar por
       </SearchLabel>
-      <SearchSelect id='sortType' Type='sort' ref={sortRef}>
+      <SearchSelect id='sortType' Type='sort' ref={sortRef} onChange={handleSubmit}>
         <option value='latest'>Últimos añadidos</option>
         <option value='price'>Precio</option>
         <option value='artist'>Artista</option>

@@ -11,7 +11,7 @@ export const ProductCard = forwardRef(({ id, img, name, unitPrice, artist, addPr
       {show &&
         <>
           <Link to={`/products/${id}`} onClick={() => window.scrollTo(0, 0)}>
-            <AlbumCover src={img} alt={name} loading='lazy' />
+            <AlbumCover src={img} alt={name} />
             <Price>${unitPrice}</Price>
             <CardText>
               {name}

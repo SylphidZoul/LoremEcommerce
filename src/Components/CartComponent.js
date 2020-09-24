@@ -55,9 +55,9 @@ export const CartComponent = ({ empty, total, products, remove, onBuy }) => {
                 })}
               </ItemsWrapper>
               <Total>
-                <h5>
+                <p>
                   Total:
-                </h5>
+                </p>
                 <Price>
                   ${total}
                 </Price>
@@ -75,14 +75,16 @@ export const CartComponent = ({ empty, total, products, remove, onBuy }) => {
 CartComponent.propTypes = {
   empty: PropTypes.bool.isRequired,
   total: PropTypes.number.isRequired,
-  products: PropTypes.arrayOf({
-    _id: PropTypes.string,
-    name: PropTypes.string,
-    artist: PropTypes.string,
-    img: PropTypes.string,
-    unitPrice: PropTypes.number,
-    quantity: PropTypes.number
-  }).isRequired,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string,
+      name: PropTypes.string,
+      artist: PropTypes.string,
+      img: PropTypes.string,
+      unitPrice: PropTypes.number,
+      quantity: PropTypes.number
+    })
+  ),
   remove: PropTypes.func.isRequired,
   onBuy: PropTypes.func.isRequired
 }

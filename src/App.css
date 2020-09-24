@@ -1,12 +1,11 @@
 :root {
-  --mainViolet: #583fd9;
-  --rgbViolet: 88, 63, 217;
-  --mainPurple: #3f0377;
-  --rgbPurple: 63, 3, 119;
+  --mainPurple: #5427b8;
+  --rgbPurple: 84, 39, 184;
   --mainDark: #191919;
   --rgbDark: 25, 25, 25;
-  --mainWhite: #d8d8f6;
-  --rgbWhite: 216, 216, 246;
+  --mainSilver: #d8d8f6;
+  --rgbSilver: 216, 216, 246;
   --mainLavander: #cbc8f3;
   --rgbLavander: 203, 200, 243;
+  --mainWhite: #f2f2f2;
 }

@@ -2,16 +2,16 @@ import styled from 'styled-components'
 
 export const SocialMediaButton = styled.button`
   position: relative;
-  font-size: 1.2em;
   width: 100%;
   padding: 10px 0;
-  font-family: 'Montserrat', sans-serif;
   border: none;
   background: ${props => props.google ? '#DB4437' : '#3b5998'};
-  color: var(--mainWhite);
+  color: var(--mainSilver);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
   cursor: pointer;
   &:hover{
-    background: var(--mainWhite);
+    background: var(--mainSilver);
     color: ${props => props.google ? '#DB4437' : '#3b5998'}
   }
   @media screen and (min-width: 480px){

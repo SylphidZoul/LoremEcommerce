@@ -12,7 +12,7 @@ const Profile = () => {
       subtitle='Perfil de usuario'
       background
     >
-      <SectionComponent colorTop='mainDark' color='mainLavander'>
+      <SectionComponent color='mainLavander'>
         <div style={{ height: '700px', width: '100%' }}>
           <h1 style={{ color: 'var(--mainDark)', fontSize: '40px' }}>
             Perfil de {userData.name}
