@@ -4,17 +4,14 @@ import { Link as RouterLink } from 'react-router-dom'
 export const CartWrapper = styled.article`
   position: relative;
   display: grid;
-  grid-template-rows: 70px;
-  row-gap: 20px;
+  grid-template-rows: 100px;
+  row-gap: 40px;
   width: 100%;
   padding: 10px;
   color: var(--mainDark);
   @media screen and (min-width: 480px) {
     justify-self: center;
     width: 65%;
-    /* background: var(--mainSilver); */
-    /* border: 1px solid rgba(var(--rgbDark), 0.2);
-    border-radius: 5px; */
   }
   @media screen and (min-width: 768px) {
     width: 75%;
@@ -26,6 +23,8 @@ export const Head = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(var(--rgbPurple),0.1);
 `
 export const Title = styled.h3`
   padding: 10px;

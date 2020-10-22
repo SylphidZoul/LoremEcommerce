@@ -5,7 +5,7 @@ export const useUserData = (isAuth, token) => {
 
   useEffect(() => {
     if (isAuth) {
-      window.fetch('https://lorem-backend.herokuapp.com/user/', {
+      window.fetch('http://localhost:3004/user/', {
         headers: {
           Authorization: `Bearer ${token}`
         }

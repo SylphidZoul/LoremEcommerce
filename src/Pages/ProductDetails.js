@@ -2,8 +2,8 @@ import React from 'react'
 import { DetailsContainer } from '../Containers/DetailsContainer'
 import { NavBackground } from '../StyledComponents/StyledNavBackground'
 import { SectionComponent } from '../Components/SectionComponent'
-import Guitar from '../Components/Guitar'
-import { Skull } from '../Components/Skull'
+import Guitar from '../Assets/Guitar'
+import { Skull } from '../Assets/Skull'
 
 const ProductDetails = ({ match }) => {
   return (
@@ -12,7 +12,7 @@ const ProductDetails = ({ match }) => {
         <Skull />
         <Guitar />
       </NavBackground>
-      <SectionComponent color='mainWhite'>
+      <SectionComponent color='mainLavander' gradient>
         <DetailsContainer product={match.params.id} />
       </SectionComponent>
     </>

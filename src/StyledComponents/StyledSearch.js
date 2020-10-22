@@ -7,6 +7,7 @@ export const SearchForm = styled.form`
   grid-row-gap: 10px;
   grid-template-areas: "searchbox searchbox" "fieldTitle sortTitle" "field sort";
   justify-items: center;
+  padding: 0 0 20px;
 `
 
 export const SearchBar = styled.div`

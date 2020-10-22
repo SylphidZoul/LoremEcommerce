@@ -6,6 +6,7 @@ export const NavWrapper = styled.nav`
   top: 0;
   width: 100%;
   height: 120px;
+  padding: 0 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -29,7 +30,7 @@ export const NavWrapper = styled.nav`
     background-size: cover;
     background-position-y: -30px;
     ${props => props.scroll && css`
-      background: rgba(var(--rgbDark), 0.7);
+      background: rgba(var(--rgbDark), 0.9);
       background-image: none;
       height: 60px;
       padding: 0;
@@ -108,8 +109,8 @@ const Links = css`
   }
   @media screen and (min-width: 768px){
     font-size: 16px;
-    letter-spacing: 0.5pt;
-    transition: all 0.2s ease 0s;
+    letter-spacing: initial;
+    transition: all 0.2s ease;
     font-weight: 400;
     opacity: 1;
   }

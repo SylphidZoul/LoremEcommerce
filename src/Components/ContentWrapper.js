@@ -2,8 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 import { NavBackground } from '../StyledComponents/StyledNavBackground'
-import Guitar from '../Components/Guitar'
-import { Skull } from '../Components/Skull'
+import Guitar from '../Assets/Guitar'
+import { Skull } from '../Assets/Skull'
 
 export const ContentWrapper = ({ children, title, subtitle, background }) => {
   return (

@@ -14,7 +14,7 @@ const AuthContextProvider = ({ children }) => {
 
   const handleAuth = (user, operation) => {
     setIsFetching(true)
-    const url = `https://lorem-backend.herokuapp.com/user/${operation}`
+    const url = `http://localhost:3004/user/${operation}`
     const config = {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },

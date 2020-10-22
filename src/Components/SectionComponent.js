@@ -6,10 +6,11 @@ export const SectionComponent = ({
   children,
   colorTop,
   color = 'mainDark',
-  title
+  title,
+  gradient
 }) => {
   return (
-    <Section color={color} colorTop={colorTop}>
+    <Section color={color} colorTop={colorTop} gradient={gradient}>
       {colorTop &&
         <Divider color={colorTop} />}
       <ContentWrapper color={color}>

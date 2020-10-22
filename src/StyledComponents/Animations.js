@@ -8,6 +8,19 @@ export const FadeIn = keyframes`
       opacity: 1;
   }
 `
+export const FadeInFromBelow = keyframes`
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
 export const TranslateLeft = keyframes`
   0% {
       transform: translateX(-100%)

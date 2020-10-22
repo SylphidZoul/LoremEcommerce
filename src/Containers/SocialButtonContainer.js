@@ -15,7 +15,7 @@ export const SocialButtonsContainer = ({ loginStyle }) => {
   }
 
   useEffect(() => {
-    window.fetch('https://lorem-backend.herokuapp.com/keys')
+    window.fetch('http://localhost:3004/keys')
       .then((response) => response.json())
       .then((res) => {
         setFacebookId(res.body.facebook)

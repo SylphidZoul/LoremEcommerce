@@ -1,20 +1,32 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
-  background: linear-gradient(180deg,
-    var(--${props => props.colorTop ? props.colorTop : props.color}) 2px,
-    var(--${props => props.color}) 3px,
-    var(--${props => props.color}));
   min-height: 445px;
   padding-top: ${props => props.colorTop ? '0' : '30px'};
+  background: var(--${props => props.color});
+  ${
+    props => props.colorTop && css`
+    background: linear-gradient(180deg,
+      var(--${props => props.colorTop}) 2px,
+      var(--${props => props.color}) 3px,
+      var(--${props => props.color}));
+  `
+  }
+  ${
+    props => props.gradient && css`
+      background: linear-gradient(180deg,
+        var(--mainWhite),
+        var(--${props => props.color}));
+    `
+  }
 `
 export const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: minmax(auto, 1024px);
+  grid-template-columns: minmax(auto, 1074px);
   justify-content: center;
   row-gap: 40px;
   padding: 20px 0;
-  overflow-x: hidden;
+  overflow: hidden;
 `
 
 export const Divider = styled.div`
@@ -26,11 +38,13 @@ export const Divider = styled.div`
   }
 `
 
-export const SectionTitle = styled.h2`
+export const SectionTitle = styled.h1`
   font-size: 40px;
   font-weight: 400;
   text-align: center;
   letter-spacing: 10px;
   font-family: 'Metal Mania';
-  color: ${props => props.color !== 'mainWhite' ? 'var(--mainSilver)' : 'var(--mainPurple)'};
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(var(--rgbPurple),0.1);
+  color: ${props => props.color !== 'mainDark' ? 'var(--mainPurple)' : 'var(--mainSilver)'};
 `

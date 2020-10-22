@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { NavWrapper, LogoLink, NavUl, Link, NavLink } from '../StyledComponents/StyledNavbar'
-import { Logo } from './Logo'
+import { Logo } from '../Assets/Logo'
 import { Burger } from './Burger'
 import BsPeople from '@meronex/icons/bs/BsPeople'
 import BsPerson from '@meronex/icons/bs/BsPerson'
@@ -13,7 +13,7 @@ export const NavbarComponent = ({ isScrolled, isOpen, onLinkClick, isAuth, userN
     <NavWrapper scroll={isScrolled}>
       <Burger open={isOpen} onClick={onLinkClick} />
       <LogoLink to='/'>
-        <Logo scroll={isScrolled} onClick={onLinkClick} />
+        <Logo scroll={isScrolled} onClick={onLinkClick} navbar />
       </LogoLink>
       <NavUl open={isOpen} scroll={isScrolled}>
         <li>
@@ -58,7 +58,6 @@ export const NavbarComponent = ({ isScrolled, isOpen, onLinkClick, isAuth, userN
               : (
                 <Link
                   open={isOpen}
-                  onClick={onLinkClick}
                   to={{
                     pathname: currentPath, search: '?login'
                   }}

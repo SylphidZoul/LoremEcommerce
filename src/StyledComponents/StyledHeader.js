@@ -9,17 +9,17 @@ export const HeaderWrapper = styled.header`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: calc(8% + 60px) 20% 5%;
+  padding: 100px 5% 10%;
   font-family: 'Metal Mania';
   background: url(${Band});
   background-size: cover;
   @media screen and (min-width: 480px){
-    padding-top: 0;
+    padding-top: 90px;
     height: 600px;
   }
   @media screen and (min-width: 768px){
     height: 750px;
-    padding-top: calc(200px + 6%);
+    padding: 200px 5% 7%;
   }
 `
 
@@ -34,7 +34,7 @@ export const Title = styled.h1`
   }
 `
 
-export const SubTitle = styled.h3`
+export const SubTitle = styled.p`
   width: 80%;
   max-width: 630px;
   font-size: 1em;
@@ -47,18 +47,21 @@ export const SubTitle = styled.h3`
 `
 
 export const HeaderButton = styled.div`
+  width: 80%;
   font-size: 1.8em;
   text-align: center;
   color: var(--mainSilver);
-  padding: 7%;
+  padding: 4%;
   border: 1px solid var(--mainSilver);
   border-radius: 1px;
   transition: all 250ms ease-in-out;
   letter-spacing: 2pt;
   @media screen and (min-width: 480px){
-    padding: 5%;
+    width: 60%;
+    padding: 3%;
   }
   @media screen and (min-width: 768px){
+    width: initial;
     font-size: 2em;
     padding: 2%;
     cursor: pointer;

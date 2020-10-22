@@ -18,7 +18,7 @@ const Products = () => {
       subtitle='¡Los albúms de rock más pedidos!'
       background
     >
-      <SectionComponent color='mainWhite' title='Descubre nuestros discos'>
+      <SectionComponent color='mainSilver' title='Descubre nuestros discos' gradient>
         <Search onSearch={handleQuery} />
         <ProductsContainer params={params} />
       </SectionComponent>
