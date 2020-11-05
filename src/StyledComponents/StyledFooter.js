@@ -1,34 +1,45 @@
 import styled, { css } from 'styled-components'
 
 export const FooterWrapper = styled.footer`
-  background: var(--mainDark);
-  height: 360px;
+  height: 550px;
+  padding: 30px 24px 15px;
   display: grid;
-  grid-template: 1fr 70px / repeat(2, minmax(auto, 512px));
+  grid-template-rows: 5fr 4fr;
+  row-gap: 20px;
   justify-content: center;
-  padding: 60px 5% 0;
   color: var(--mainLavander);
+  background: var(--mainDark);
   & > p {
     align-self: center;
     font-size: 12px;
   }
+  @media screen and (min-width: 480px) {
+    height: 400px;
+    padding: 30px 40px 15px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 360px;
+    grid-template: 1fr 70px / repeat(2, minmax(auto, 512px));
+    padding: 60px 50px 0;
+  }
 `
 export const BrandDiv = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100%;
   border-bottom: 2px solid var(--mainLavander);
 `
 export const Text = styled.p`
-  width: 350px;
   line-height: 20px;
   font-size: 14px;
+  @media screen and (min-width: 768px) {
+    width: 350px;
+  }
 `
 export const NetworksUl = styled.ul`
   display: flex;
   flex-direction: row;
-  width: 300px;
   ${props => props.end && css`
     width: initial;
     align-self: center;
@@ -39,5 +50,8 @@ export const NetworksUl = styled.ul`
     margin-right: 20px;
     color: var(--mainLavander);
     text-decoration: none;
+  }
+  @media screen and (min-width: 768px) {
+    width: 300px;
   }
 `

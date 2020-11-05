@@ -16,7 +16,7 @@ export const GridWrapper = styled.div`
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
-    padding: 0 20px 30px;
+    padding: 0 50px 30px;
   }
 `
 export const Article = styled.article`

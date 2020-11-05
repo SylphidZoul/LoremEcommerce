@@ -41,11 +41,12 @@ export const Footer = () => {
       </BrandDiv>
       <BrandDiv>
         <Text>
-          Esta web sólo tiene fines didacticos.
+          <strong>Esta web sólo tiene fines didacticos.</strong>
         </Text>
         <Text>
           <strong>Features: </strong>
-          Auth, code splitting, rutas privadas, redireccionamiento a modal,
+          <br />
+          Auth, code splitting, rutas privadas, ContextAPI, redireccionamiento a modal,
           buscador con filtros, paginación con infinite scroll,
           carrito de compras, Toasts, integración de MercadoPago en el backend.
         </Text>
