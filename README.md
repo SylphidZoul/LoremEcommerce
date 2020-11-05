@@ -4,7 +4,7 @@
 
 ```
 Demo:
-https://lorem-ecommerce-sylphid.vercel.app/
+[https://lorem-ecommerce-sylphid.vercel.app/](https://lorem-ecommerce-sylphid.vercel.app/)
 ```
 
 
