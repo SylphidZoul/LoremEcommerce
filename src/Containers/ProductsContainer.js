@@ -15,11 +15,9 @@ export const ProductsContainer = ({ params }) => {
   const History = useHistory()
 
   const handleButton = (product) => {
-    if (!isAuth) {
-      return History.push(`${Location.pathname}?login`)
-    }
-    product.quantity = 1
-    return addProduct(product)
+    if (!isAuth) return History.push(`${Location.pathname}?login`)
+    const addedProduct = { ...product, quantity: 1 }
+    return addProduct(addedProduct)
   }
 
   return (

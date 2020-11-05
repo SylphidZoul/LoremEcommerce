@@ -10,7 +10,7 @@ export const FadeIn = keyframes`
 `
 export const FadeInFromBelow = keyframes`
   0% {
-    transform: translateY(50px);
+    transform: translateY(100px);
     opacity: 0;
   }
   20% {

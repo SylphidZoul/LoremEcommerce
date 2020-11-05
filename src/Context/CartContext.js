@@ -16,7 +16,7 @@ const CartContextProvider = ({ children }) => {
   }
 
   const getPayment = (id) => {
-    window.fetch(`http://localhost:3004/checkout/${id}`)
+    window.fetch(`https://lorem-backend.herokuapp.com/checkout/${id}`)
       .then((res) => res.json())
       .then((response) => {
         const payment = response.body

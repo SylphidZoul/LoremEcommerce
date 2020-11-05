@@ -29,7 +29,7 @@ export const CartContainer = () => {
       },
       body: JSON.stringify(state.cart)
     }
-    window.fetch('http://localhost:3004/checkout/', config)
+    window.fetch('https://lorem-backend.herokuapp.com/checkout/', config)
       .then(res => res.json())
       .then(response => {
         window.open(response.body.init_point, '_blank')

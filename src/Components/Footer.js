@@ -40,9 +40,15 @@ export const Footer = () => {
         </NetworksUl>
       </BrandDiv>
       <BrandDiv>
-        <p>asdasdasdasgdsf</p>
-        <p>asd sd asdsadas dasdqw das</p>
-        <p> asdasfas fqw fsafd asdasdasdasd</p>
+        <Text>
+          Esta web sólo tiene fines didacticos.
+        </Text>
+        <Text>
+          <strong>Features: </strong>
+          Auth, code splitting, rutas privadas, redireccionamiento a modal,
+          buscador con filtros, paginación con infinite scroll,
+          carrito de compras, Toasts, integración de MercadoPago en el backend.
+        </Text>
       </BrandDiv>
       <p>© 2020 Lorem</p>
       <NetworksUl end>

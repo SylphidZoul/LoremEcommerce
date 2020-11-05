@@ -44,13 +44,12 @@ export const Toast = styled.div`
   color: var(--mainSilver);
   margin-top: 15px;
   animation: ${TranslateRight} 1000ms ease-out forwards;
-  overflow-x: hidden;
+  overflow: hidden;
 `
 export const ToastImg = styled.img`
   grid-area: img;
   min-height: 100%;
   width: 100%;
-  overflow: hidden;
 `
 export const ToastTitle = styled.h3`
   grid-area: title;
