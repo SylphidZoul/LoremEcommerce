@@ -18,14 +18,14 @@ _Not finished yet, missing profile route._
 
 ## Tools: 
 
-*[React](https://es.reactjs.org/)
-*[react-router-dom](https://www.npmjs.com/package/react-router-dom)
-*[react-helmet](https://www.npmjs.com/package/react-helmet)
-*[react-facebook-login](https://www.npmjs.com/package/react-facebook-login)
-*[react-google-login](https://www.npmjs.com/package/react-google-login)
-*[styled-components](https://www.npmjs.com/package/styled-components)
-*[prop-types](https://www.npmjs.com/package/prop-types)
-*[query-string](https://www.npmjs.com/package/query-string)
-*[standard](https://standardjs.com/) - linter.
-*[vercel](https://vercel.com/) - deploy.
-*[@meronex/icons](https://icons.meronex.com/) - a react-icons's fork fixing a strange bug on some CRA versions that causes a 500kb~ download of all icons on the client even if your are not using them.
+* [React](https://es.reactjs.org/)
+* [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+* [react-helmet](https://www.npmjs.com/package/react-helmet)
+* [react-facebook-login](https://www.npmjs.com/package/react-facebook-login)
+* [react-google-login](https://www.npmjs.com/package/react-google-login)
+* [styled-components](https://www.npmjs.com/package/styled-components)
+* [prop-types](https://www.npmjs.com/package/prop-types)
+* [query-string](https://www.npmjs.com/package/query-string)
+* [standard](https://standardjs.com/) - linter.
+* [vercel](https://vercel.com/) - deploy.
+* [@meronex/icons](https://icons.meronex.com/) - a react-icons's fork fixing a strange bug on some CRA versions that causes a 500kb~ download of all icons on the client even if your are not using them.
