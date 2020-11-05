@@ -2,11 +2,8 @@
 
 ## Project to practice eCommerce with MercadoPago.
 
-```
 Demo:
 [https://lorem-ecommerce-sylphid.vercel.app/](https://lorem-ecommerce-sylphid.vercel.app/)
-```
-
 
 _Not finished yet, missing profile route._
 
