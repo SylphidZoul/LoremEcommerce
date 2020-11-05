@@ -15,7 +15,7 @@ _Not finished yet, missing profile route._
 
 ## Tools: 
 
-* [React](https://es.reactjs.org/)
+* [react](https://es.reactjs.org/)
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 * [react-helmet](https://www.npmjs.com/package/react-helmet)
 * [react-facebook-login](https://www.npmjs.com/package/react-facebook-login)
