@@ -34,7 +34,7 @@ export const Divider = styled.div`
   border-left: 100vw solid ${props => `var(--${props.color})`};
   margin-top: -1px;
   @media screen and (min-width: 1024px) {
-    border-left-width: calc(100vw - 16px);
+    border-left-width: calc(100vw - 18px);
   }
 `
 

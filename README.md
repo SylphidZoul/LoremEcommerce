@@ -1,4 +1,4 @@
-# Lorem Ipsum eCommerce React SPA
+# Lorem Ipsum eCommerce
 
 ## Project to practice eCommerce with MercadoPago.
 
@@ -6,6 +6,10 @@ Demo:
 [https://lorem-ecommerce-sylphid.vercel.app/](https://lorem-ecommerce-sylphid.vercel.app/)
 
 _Not finished yet, missing profile route._
+
+## Backend
+
+[LoremBackend](https://github.com/SylphidZoul/LoremBackend)
 
 ## Knowed bugs:
 
