@@ -18,13 +18,13 @@ export const useProductsData = (params) => {
   }, [isFetching, hasMore])
 
   useEffect(() => {
-    dispatch({ type: 'UPDATE_QUERY', params })
+    dispatch({ type: 'UPDATE_QUERY', payload: { params } })
     // eslint-disable-next-line
   }, [pageNumber])
 
   useEffect(() => {
     dispatch({ type: 'RESET' })
-    dispatch({ type: 'UPDATE_QUERY', params, reseted: true })
+    dispatch({ type: 'UPDATE_QUERY', payload: { params, reseted: true } })
   }, [params])
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export const useProductsData = (params) => {
         .then(response => {
           if (isMounted) {
             const products = response.body
-            dispatch({ type: 'UPDATE_PRODUCTS', products })
+            dispatch({ type: 'UPDATE_PRODUCTS', payload: products })
           }
         })
         .catch(e => console.log('Ha habido un error con el servidor'))

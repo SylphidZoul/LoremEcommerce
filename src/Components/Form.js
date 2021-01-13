@@ -7,18 +7,18 @@ export const FormComponent = ({ operation, handleSubmit, isFetching }) => {
   if (operation === 'login') {
     return (
       <Form onSubmit={handleSubmit} login>
-        <Input placeholder='Ingrese su e-mail' id='email-input' type='email' />
-        <Input placeholder='Ingrese su contraseña' id='password-input' type='password' />
+        <Input placeholder='Ingrese su e-mail' autoComplete='off' id='email-input' type='email' />
+        <Input placeholder='Ingrese su contraseña' autoComplete='off' id='password-input' type='password' />
         <Button type='submit' disabled={isFetching}>{isFetching ? <Spinner /> : 'Ingresar'}</Button>
       </Form>
     )
   } else {
     return (
       <Form onSubmit={handleSubmit}>
-        <Input placeholder='Ingrese su nombre' id='name-input' type='text' />
-        <Input placeholder='Ingrese su e-mail' id='email-input' type='email' />
-        <Input placeholder='Ingrese su contraseña' id='password-input' type='password' />
-        <Input placeholder='Confirme su contraseña' id='password-input2' type='password' />
+        <Input placeholder='Ingrese su nombre' autoComplete='off' id='name-input' type='text' />
+        <Input placeholder='Ingrese su e-mail' autoComplete='off' id='email-input' type='email' />
+        <Input placeholder='Ingrese su contraseña' autoComplete='off' id='password-input' type='password' />
+        <Input placeholder='Confirme su contraseña' autoComplete='off' id='password-input2' type='password' />
         <Button type='submit' disabled={isFetching}>{isFetching ? <Spinner /> : 'Registrarse'}</Button>
       </Form>
     )

@@ -15,7 +15,7 @@ export const Spinner = styled.div`
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  animation: ${spin} 1s ease-out infinite;
+  animation: ${spin} 1s linear infinite;
 `
 
 export const LoadingPageSpinner = styled(Spinner)`

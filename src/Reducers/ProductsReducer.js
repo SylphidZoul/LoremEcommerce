@@ -21,7 +21,7 @@ const addPage = (state) => {
   return { ...state, pageNumber: updatedPage }
 }
 
-const updateQuery = (params, reseted, state) => {
+const updateQuery = ({ params, reseted }, state) => {
   let updatedQuery = ''
   if (reseted) {
     updatedQuery = `${params}&pageNumber=1`
@@ -39,11 +39,11 @@ const resetProducts = (state) => {
 export const productReducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_PRODUCTS':
-      return updateProducts(action.products, state)
+      return updateProducts(action.payload, state)
     case 'ADD_PAGE':
       return addPage(state)
     case 'UPDATE_QUERY':
-      return updateQuery(action.params, action.reseted, state)
+      return updateQuery(action.payload, state)
     case 'RESET':
       return resetProducts(state)
     case 'FETCHING':

@@ -1,3 +1,9 @@
+export const initialState = {
+  cart: [],
+  last: {},
+  payment: {}
+}
+
 const addProductToCart = (product, state) => {
   const updatedCart = [...state.cart]
   const updatedItemIndex = updatedCart.findIndex(
@@ -35,11 +41,11 @@ const removeProductFromCart = (productId, state) => {
 export const cartReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_PRODUCT':
-      return addProductToCart(action.product, state)
+      return addProductToCart(action.payload, state)
     case 'REMOVE_PRODUCT':
-      return removeProductFromCart(action.productId, state)
+      return removeProductFromCart(action.payload, state)
     case 'GET_PAYMENT':
-      return { ...state, payment: action.payment }
+      return { ...state, payment: action.payload }
     default:
       return state
   }
